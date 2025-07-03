@@ -5,10 +5,9 @@
 
 **Falconf: Learning to Identify Misconfiguration via Log-based Deep Learning Model**
 
-<img src="https://github.com/user-attachments/assets/17b78d3e-535d-464c-bc94-d264e71a77e7">
+*Falconf* is log-based deep learning framework for accurate misconfiguration identification.
 
-*Falconf* is log-based deep learning framework for accurate misconfiguration identification.   
-
+<img src="https://github.com/user-attachments/assets/17b78d3e-535d-464c-bc94-d264e71a77e7">   
 
 ## Organization
 ---

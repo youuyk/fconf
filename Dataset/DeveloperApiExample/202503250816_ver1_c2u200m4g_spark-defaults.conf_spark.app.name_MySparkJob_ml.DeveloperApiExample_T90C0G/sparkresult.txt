@@ -1,0 +1,6 @@
+time: 19.650910139
+timeout: 0
+cpu: 20267
+netIO: 923860000 923860000
+blockIO: 8200 304155500
+result: 2025-03-25 08:18:38,879 INFO [main] client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master/172.20.1.10:8032 Total number of applications (application-types: [], states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED] and tags: []):1 Application-Id Application-Name Application-Type User Queue State Final-State Progress Tracking-URL application_1742890636953_0001 MySparkJob SPARK root default FINISHED SUCCEEDED 100% N/A

@@ -1,0 +1,225 @@
+program=ml.DeveloperApiExample
+SPARKLORD_MODE=CONFIG_INJECTION
+cpu_cores=2
+cpu_util=200
+memory=4g
+config_file_name=spark-defaults.conf
+config_key=spark.driver.bindAddress
+config_value=192.168.1.100
+
+2025-03-25 08:46:38,360 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for TERM
+2025-03-25 08:46:38,364 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for HUP
+2025-03-25 08:46:38,364 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for INT
+2025-03-25 08:46:38,548 DEBUG [main] org.apache.hadoop.util.Shell: setsid exited with exit code 0
+2025-03-25 08:46:38,664 INFO [main] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-25 08:46:38,665 INFO [main] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-25 08:46:38,665 INFO [main] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-25 08:46:38,665 INFO [main] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-25 08:46:38,666 INFO [main] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-25 08:46:38,712 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[GetGroups])
+2025-03-25 08:46:38,716 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2025-03-25 08:46:38,717 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2025-03-25 08:46:38,717 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since last successful login])
+2025-03-25 08:46:38,717 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since startup])
+2025-03-25 08:46:38,717 DEBUG [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: UgiMetrics, User and group related metrics
+2025-03-25 08:46:38,733 DEBUG [main] org.apache.hadoop.security.SecurityUtil: Setting hadoop.security.token.service.use_ip to true
+2025-03-25 08:46:38,737 DEBUG [main] org.apache.hadoop.security.Groups:  Creating new Groups object
+2025-03-25 08:46:38,737 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+2025-03-25 08:46:38,737 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2025-03-25 08:46:38,738 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-03-25 08:46:38,738 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-03-25 08:46:38,738 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Falling back to shell based
+2025-03-25 08:46:38,738 DEBUG [main] org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2025-03-25 08:46:38,778 DEBUG [main] org.apache.hadoop.security.Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2025-03-25 08:46:38,852 DEBUG [main] org.apache.spark.deploy.SparkHadoopUtil: creating UGI for user: root
+2025-03-25 08:46:38,855 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Hadoop login
+2025-03-25 08:46:38,855 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: hadoop login commit
+2025-03-25 08:46:38,857 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using local user: UnixPrincipal: root
+2025-03-25 08:46:38,858 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using user: "UnixPrincipal: root" with name: root
+2025-03-25 08:46:38,858 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: User entry: "root"
+2025-03-25 08:46:38,858 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Reading credentials from location /data/tmp/nm-local-dir/usercache/root/appcache/application_1742892346867_0001/container_1742892346867_0001_01_000001/container_tokens
+2025-03-25 08:46:38,861 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Loaded 1 tokens from /data/tmp/nm-local-dir/usercache/root/appcache/application_1742892346867_0001/container_1742892346867_0001_01_000001/container_tokens
+2025-03-25 08:46:38,861 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: UGI loginUser: root (auth:SIMPLE)
+2025-03-25 08:46:38,862 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3@1522d8a0]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1875)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:925)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+2025-03-25 08:46:38,872 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: ApplicationAttemptId: appattempt_1742892346867_0001_000001
+2025-03-25 08:46:38,873 DEBUG [main] org.apache.spark.util.ShutdownHookManager: Adding shutdown hook
+2025-03-25 08:46:38,895 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: Starting the user application in a separate Thread
+2025-03-25 08:46:38,896 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: Waiting for spark context initialization...
+2025-03-25 08:46:38,940 INFO [Driver] org.apache.spark.SparkContext: Running Spark version 3.3.2
+2025-03-25 08:46:38,955 INFO [Driver] org.apache.spark.resource.ResourceUtils: ==============================================================
+2025-03-25 08:46:38,955 INFO [Driver] org.apache.spark.resource.ResourceUtils: No custom resources configured for spark.driver.
+2025-03-25 08:46:38,955 INFO [Driver] org.apache.spark.resource.ResourceUtils: ==============================================================
+2025-03-25 08:46:38,955 INFO [Driver] org.apache.spark.SparkContext: Submitted application: DeveloperApiExample
+2025-03-25 08:46:38,968 INFO [Driver] org.apache.spark.resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2025-03-25 08:46:38,972 INFO [Driver] org.apache.spark.resource.ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+2025-03-25 08:46:38,973 INFO [Driver] org.apache.spark.resource.ResourceProfileManager: Added ResourceProfile id: 0
+2025-03-25 08:46:38,997 INFO [Driver] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-25 08:46:38,998 INFO [Driver] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-25 08:46:38,998 INFO [Driver] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-25 08:46:38,998 INFO [Driver] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-25 08:46:38,998 INFO [Driver] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-25 08:46:39,028 DEBUG [Driver] io.netty.util.internal.logging.InternalLoggerFactory: Using SLF4J as the default logging framework
+2025-03-25 08:46:39,031 DEBUG [Driver] io.netty.util.internal.InternalThreadLocalMap: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2025-03-25 08:46:39,032 DEBUG [Driver] io.netty.util.internal.InternalThreadLocalMap: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2025-03-25 08:46:39,038 DEBUG [Driver] io.netty.channel.MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 4
+2025-03-25 08:46:39,061 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: -Dio.netty.noUnsafe: false
+2025-03-25 08:46:39,061 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: Java version: 8
+2025-03-25 08:46:39,061 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+2025-03-25 08:46:39,062 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+2025-03-25 08:46:39,062 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: java.nio.Buffer.address: available
+2025-03-25 08:46:39,062 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: direct buffer constructor: available
+2025-03-25 08:46:39,063 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: java.nio.Bits.unaligned: available, true
+2025-03-25 08:46:39,063 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2025-03-25 08:46:39,063 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+2025-03-25 08:46:39,063 DEBUG [Driver] io.netty.util.internal.PlatformDependent: sun.misc.Unsafe: available
+2025-03-25 08:46:39,063 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.tmpdir: /data/tmp/nm-local-dir/usercache/root/appcache/application_1742892346867_0001/container_1742892346867_0001_01_000001/tmp (java.io.tmpdir)
+2025-03-25 08:46:39,063 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2025-03-25 08:46:39,064 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.maxDirectMemory: 3817865216 bytes
+2025-03-25 08:46:39,064 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2025-03-25 08:46:39,064 DEBUG [Driver] io.netty.util.internal.CleanerJava6: java.nio.ByteBuffer.cleaner(): available
+2025-03-25 08:46:39,064 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.noPreferDirect: false
+2025-03-25 08:46:39,065 DEBUG [Driver] io.netty.channel.nio.NioEventLoop: -Dio.netty.noKeySetOptimization: false
+2025-03-25 08:46:39,065 DEBUG [Driver] io.netty.channel.nio.NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+2025-03-25 08:46:39,069 DEBUG [Driver] io.netty.util.internal.PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+2025-03-25 08:46:39,081 DEBUG [Driver] io.netty.util.ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+2025-03-25 08:46:39,081 DEBUG [Driver] io.netty.util.ResourceLeakDetector: -Dio.netty.leakDetection.targetRecords: 4
+2025-03-25 08:46:39,082 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 4
+2025-03-25 08:46:39,082 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 4
+2025-03-25 08:46:39,082 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+2025-03-25 08:46:39,082 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+2025-03-25 08:46:39,082 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.useCacheForAllThreads: true
+2025-03-25 08:46:39,083 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2025-03-25 08:46:39,099 DEBUG [Driver] io.netty.channel.DefaultChannelId: -Dio.netty.processId: 1331 (auto-detected)
+2025-03-25 08:46:39,099 DEBUG [Driver] io.netty.util.NetUtil: -Djava.net.preferIPv4Stack: false
+2025-03-25 08:46:39,099 DEBUG [Driver] io.netty.util.NetUtil: -Djava.net.preferIPv6Addresses: false
+2025-03-25 08:46:39,100 DEBUG [Driver] io.netty.util.NetUtilInitializations: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2025-03-25 08:46:39,101 DEBUG [Driver] io.netty.util.NetUtil: /proc/sys/net/core/somaxconn: 4096
+2025-03-25 08:46:39,101 DEBUG [Driver] io.netty.channel.DefaultChannelId: -Dio.netty.machineId: 02:42:ac:ff:fe:14:01:0f (auto-detected)
+2025-03-25 08:46:39,109 DEBUG [Driver] io.netty.buffer.ByteBufUtil: -Dio.netty.allocator.type: pooled
+2025-03-25 08:46:39,109 DEBUG [Driver] io.netty.buffer.ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 0
+2025-03-25 08:46:39,109 DEBUG [Driver] io.netty.buffer.ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2025-03-25 08:46:39,119 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,120 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,121 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,122 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,123 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,123 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,124 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,125 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,126 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,127 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,128 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,128 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,129 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,131 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,132 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,133 WARN [Driver] org.apache.spark.util.Utils: Service 'sparkDriver' could not bind on a random free port. You may check whether configuring an appropriate binding address.
+2025-03-25 08:46:39,136 ERROR [Driver] org.apache.spark.SparkContext: Error initializing SparkContext.
+java.net.BindException: Cannot assign requested address: Service 'sparkDriver' failed after 16 retries (on a random free port)! Consider explicitly setting the appropriate binding address for the service 'sparkDriver' (for example spark.driver.bindAddress for SparkDriver) to the correct binding address.
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:461)
+	at sun.nio.ch.Net.bind(Net.java:453)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:222)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+2025-03-25 08:46:39,159 INFO [Driver] org.apache.spark.SparkContext: Successfully stopped SparkContext
+2025-03-25 08:46:39,160 ERROR [Driver] org.apache.spark.deploy.yarn.ApplicationMaster: User class threw exception: java.net.BindException: Cannot assign requested address: Service 'sparkDriver' failed after 16 retries (on a random free port)! Consider explicitly setting the appropriate binding address for the service 'sparkDriver' (for example spark.driver.bindAddress for SparkDriver) to the correct binding address.
+java.net.BindException: Cannot assign requested address: Service 'sparkDriver' failed after 16 retries (on a random free port)! Consider explicitly setting the appropriate binding address for the service 'sparkDriver' (for example spark.driver.bindAddress for SparkDriver) to the correct binding address.
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:461)
+	at sun.nio.ch.Net.bind(Net.java:453)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:222)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+2025-03-25 08:46:39,161 INFO [Driver] org.apache.spark.deploy.yarn.ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User class threw exception: java.net.BindException: Cannot assign requested address: Service 'sparkDriver' failed after 16 retries (on a random free port)! Consider explicitly setting the appropriate binding address for the service 'sparkDriver' (for example spark.driver.bindAddress for SparkDriver) to the correct binding address.
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:461)
+	at sun.nio.ch.Net.bind(Net.java:453)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:222)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+)
+2025-03-25 08:46:39,166 ERROR [main] org.apache.spark.deploy.yarn.ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:511)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:275)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:926)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:925)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:925)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+Caused by: java.net.BindException: Cannot assign requested address: Service 'sparkDriver' failed after 16 retries (on a random free port)! Consider explicitly setting the appropriate binding address for the service 'sparkDriver' (for example spark.driver.bindAddress for SparkDriver) to the correct binding address.
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:461)
+	at sun.nio.ch.Net.bind(Net.java:453)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:222)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+2025-03-25 08:46:39,174 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Shutdown hook called
+2025-03-25 08:46:39,175 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: Completed shutdown in 0.009 seconds; Timeouts: 0
+2025-03-25 08:46:39,182 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: ShutdownHookManager completed shutdown.

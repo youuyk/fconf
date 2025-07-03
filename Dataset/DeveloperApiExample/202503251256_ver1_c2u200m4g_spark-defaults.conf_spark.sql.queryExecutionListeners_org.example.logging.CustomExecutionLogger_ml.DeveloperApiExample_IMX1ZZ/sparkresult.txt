@@ -1,0 +1,6 @@
+time: 29.149750591
+timeout: 0
+cpu: 45900
+netIO: 923810000 923810000
+blockIO: 0 304294000
+result: 2025-03-25 12:58:56,199 INFO [main] client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master/172.20.1.14:8032 Total number of applications (application-types: [], states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED] and tags: []):1 Application-Id Application-Name Application-Type User Queue State Final-State Progress Tracking-URL application_1742907430743_0001 org.apache.spark.examples.ml.DeveloperApiExample SPARK root default FINISHED FAILED 100% N/A

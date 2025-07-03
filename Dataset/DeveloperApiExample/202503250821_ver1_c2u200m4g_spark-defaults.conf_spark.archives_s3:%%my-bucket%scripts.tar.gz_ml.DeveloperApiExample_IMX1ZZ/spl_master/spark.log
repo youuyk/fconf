@@ -1,0 +1,73 @@
+program=ml.DeveloperApiExample
+SPARKLORD_MODE=CONFIG_INJECTION
+cpu_cores=2
+cpu_util=200
+memory=4g
+config_file_name=spark-defaults.conf
+config_key=spark.archives
+config_value=s3://my-bucket/scripts.tar.gz
+
+2025-03-25 08:22:29,049 DEBUG [main] org.apache.spark.util.ShutdownHookManager: Adding shutdown hook
+2025-03-25 08:22:29,075 DEBUG [main] org.apache.hadoop.util.Shell: setsid exited with exit code 0
+2025-03-25 08:22:29,117 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[GetGroups])
+2025-03-25 08:22:29,120 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2025-03-25 08:22:29,120 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2025-03-25 08:22:29,120 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since last successful login])
+2025-03-25 08:22:29,120 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since startup])
+2025-03-25 08:22:29,121 DEBUG [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: UgiMetrics, User and group related metrics
+2025-03-25 08:22:29,132 DEBUG [main] org.apache.hadoop.security.SecurityUtil: Setting hadoop.security.token.service.use_ip to true
+2025-03-25 08:22:29,139 DEBUG [main] org.apache.hadoop.security.Groups:  Creating new Groups object
+2025-03-25 08:22:29,140 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+2025-03-25 08:22:29,140 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2025-03-25 08:22:29,140 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-03-25 08:22:29,140 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-03-25 08:22:29,140 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Falling back to shell based
+2025-03-25 08:22:29,141 DEBUG [main] org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2025-03-25 08:22:29,182 DEBUG [main] org.apache.hadoop.security.Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2025-03-25 08:22:29,186 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Hadoop login
+2025-03-25 08:22:29,186 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: hadoop login commit
+2025-03-25 08:22:29,188 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using local user: UnixPrincipal: root
+2025-03-25 08:22:29,189 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using user: "UnixPrincipal: root" with name: root
+2025-03-25 08:22:29,189 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: User entry: "root"
+2025-03-25 08:22:29,189 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: UGI loginUser: root (auth:SIMPLE)
+2025-03-25 08:22:29,190 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Acquiring creator semaphore for file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-25 08:22:29,190 DEBUG [main] org.apache.hadoop.fs.FileSystem: Acquiring creator semaphore for file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar: duration 0:00.000s
+2025-03-25 08:22:29,191 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Creating FS file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-25 08:22:29,191 DEBUG [main] org.apache.hadoop.fs.FileSystem: Loading filesystems
+2025-03-25 08:22:29,197 DEBUG [main] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.fs.LocalFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,200 DEBUG [main] org.apache.hadoop.fs.FileSystem: viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,201 DEBUG [main] org.apache.hadoop.fs.FileSystem: har:// = class org.apache.hadoop.fs.HarFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,202 DEBUG [main] org.apache.hadoop.fs.FileSystem: http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,203 DEBUG [main] org.apache.hadoop.fs.FileSystem: https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,206 DEBUG [main] org.apache.hadoop.fs.FileSystem: hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,209 DEBUG [main] org.apache.hadoop.fs.FileSystem: webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,210 DEBUG [main] org.apache.hadoop.fs.FileSystem: swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-25 08:22:29,211 DEBUG [main] org.apache.hadoop.fs.FileSystem: nullscan:// = class org.apache.hadoop.hive.ql.io.NullScanFileSystem from /spark/jars/hive-exec-2.3.9-core.jar
+2025-03-25 08:22:29,211 DEBUG [main] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem from /spark/jars/hive-exec-2.3.9-core.jar
+2025-03-25 08:22:29,211 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking for FS supporting file
+2025-03-25 08:22:29,211 DEBUG [main] org.apache.hadoop.fs.FileSystem: looking for configuration option fs.file.impl
+2025-03-25 08:22:29,227 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking in service filesystems for implementation class
+2025-03-25 08:22:29,227 DEBUG [main] org.apache.hadoop.fs.FileSystem: FS for file is class org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem
+2025-03-25 08:22:29,229 DEBUG [main] org.apache.hadoop.fs.FileSystem: Creating FS file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar: duration 0:00.038s
+2025-03-25 08:22:29,230 DEBUG [main] org.apache.hadoop.fs.Globber: Created Globber for path=file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar, symlinks=true
+2025-03-25 08:22:29,230 DEBUG [main] org.apache.hadoop.fs.Globber: Starting: glob file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-25 08:22:29,230 DEBUG [main] org.apache.hadoop.fs.Globber: Filesystem glob /spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-25 08:22:29,230 DEBUG [main] org.apache.hadoop.fs.Globber: Pattern: /spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-25 08:22:29,241 DEBUG [main] org.apache.hadoop.fs.Globber: Component spark, patterned=false
+2025-03-25 08:22:29,242 DEBUG [main] org.apache.hadoop.fs.Globber: Component examples, patterned=false
+2025-03-25 08:22:29,242 DEBUG [main] org.apache.hadoop.fs.Globber: Component jars, patterned=false
+2025-03-25 08:22:29,243 DEBUG [main] org.apache.hadoop.fs.Globber: Component spark-examples_2.12-3.3.2.jar, patterned=false
+2025-03-25 08:22:29,244 DEBUG [main] org.apache.hadoop.fs.Globber: glob file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar: duration 0:00.014s
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Acquiring creator semaphore for s3://my-bucket/scripts.tar.gz
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: Acquiring creator semaphore for s3://my-bucket/scripts.tar.gz: duration 0:00.000s
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Creating FS s3://my-bucket/scripts.tar.gz
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking for FS supporting s3
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: looking for configuration option fs.s3.impl
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking in service filesystems for implementation class
+2025-03-25 08:22:29,246 DEBUG [main] org.apache.hadoop.fs.FileSystem: Creating FS s3://my-bucket/scripts.tar.gz: duration 0:00.000s
+2025-03-25 08:22:29,249 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Shutdown hook called
+2025-03-25 08:22:29,249 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Deleting directory /tmp/spark-602da915-f07b-4e6e-b0f7-79ef08713125
+2025-03-25 08:22:29,250 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FileSystem.close() by method: org.apache.hadoop.fs.FilterFileSystem.close(FilterFileSystem.java:529)); Key: (root (auth:SIMPLE))@file://; URI: file:///; Object Identity Hash: 7b730f46
+2025-03-25 08:22:29,251 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FileSystem.close() by method: org.apache.hadoop.fs.RawLocalFileSystem.close(RawLocalFileSystem.java:759)); Key: null; URI: file:///; Object Identity Hash: 40485dff
+2025-03-25 08:22:29,251 DEBUG [Thread-1] org.apache.hadoop.util.ShutdownHookManager: Completed shutdown in 0.004 seconds; Timeouts: 0
+2025-03-25 08:22:29,265 DEBUG [Thread-1] org.apache.hadoop.util.ShutdownHookManager: ShutdownHookManager completed shutdown.

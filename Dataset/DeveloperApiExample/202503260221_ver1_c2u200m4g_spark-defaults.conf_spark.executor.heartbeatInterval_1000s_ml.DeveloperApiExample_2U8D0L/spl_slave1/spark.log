@@ -1,0 +1,222 @@
+program=ml.DeveloperApiExample
+SPARKLORD_MODE=CONFIG_INJECTION
+cpu_cores=2
+cpu_util=200
+memory=4g
+config_file_name=spark-defaults.conf
+config_key=spark.executor.heartbeatInterval
+config_value=1000s
+
+2025-03-26 02:22:52,743 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for TERM
+2025-03-26 02:22:52,747 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for HUP
+2025-03-26 02:22:52,747 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for INT
+2025-03-26 02:22:52,963 DEBUG [main] org.apache.hadoop.util.Shell: setsid exited with exit code 0
+2025-03-26 02:22:53,099 INFO [main] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-26 02:22:53,099 INFO [main] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-26 02:22:53,100 INFO [main] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-26 02:22:53,100 INFO [main] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-26 02:22:53,100 INFO [main] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-26 02:22:53,172 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[GetGroups])
+2025-03-26 02:22:53,177 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2025-03-26 02:22:53,177 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2025-03-26 02:22:53,178 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since last successful login])
+2025-03-26 02:22:53,178 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since startup])
+2025-03-26 02:22:53,178 DEBUG [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: UgiMetrics, User and group related metrics
+2025-03-26 02:22:53,204 DEBUG [main] org.apache.hadoop.security.SecurityUtil: Setting hadoop.security.token.service.use_ip to true
+2025-03-26 02:22:53,208 DEBUG [main] org.apache.hadoop.security.Groups:  Creating new Groups object
+2025-03-26 02:22:53,209 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+2025-03-26 02:22:53,209 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2025-03-26 02:22:53,210 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-03-26 02:22:53,210 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-03-26 02:22:53,210 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Falling back to shell based
+2025-03-26 02:22:53,211 DEBUG [main] org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2025-03-26 02:22:53,260 DEBUG [main] org.apache.hadoop.security.Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2025-03-26 02:22:53,354 DEBUG [main] org.apache.spark.deploy.SparkHadoopUtil: creating UGI for user: root
+2025-03-26 02:22:53,358 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Hadoop login
+2025-03-26 02:22:53,358 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: hadoop login commit
+2025-03-26 02:22:53,359 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using local user: UnixPrincipal: root
+2025-03-26 02:22:53,361 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using user: "UnixPrincipal: root" with name: root
+2025-03-26 02:22:53,361 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: User entry: "root"
+2025-03-26 02:22:53,361 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Reading credentials from location /data/tmp/nm-local-dir/usercache/root/appcache/application_1742955712061_0001/container_1742955712061_0001_02_000001/container_tokens
+2025-03-26 02:22:53,365 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Loaded 1 tokens from /data/tmp/nm-local-dir/usercache/root/appcache/application_1742955712061_0001/container_1742955712061_0001_02_000001/container_tokens
+2025-03-26 02:22:53,365 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: UGI loginUser: root (auth:SIMPLE)
+2025-03-26 02:22:53,366 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3@1522d8a0]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1875)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:925)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+2025-03-26 02:22:53,379 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: ApplicationAttemptId: appattempt_1742955712061_0001_000002
+2025-03-26 02:22:53,380 DEBUG [main] org.apache.spark.util.ShutdownHookManager: Adding shutdown hook
+2025-03-26 02:22:53,406 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: Starting the user application in a separate Thread
+2025-03-26 02:22:53,408 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: Waiting for spark context initialization...
+2025-03-26 02:22:53,456 INFO [Driver] org.apache.spark.SparkContext: Running Spark version 3.3.2
+2025-03-26 02:22:53,464 ERROR [Driver] org.apache.spark.SparkContext: Error initializing SparkContext.
+java.lang.IllegalArgumentException: requirement failed: The value of spark.network.timeout=120000ms must be greater than the value of spark.executor.heartbeatInterval=1000000ms.
+	at scala.Predef$.require(Predef.scala:281)
+	at org.apache.spark.SparkConf.validateSettings(SparkConf.scala:571)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:392)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+2025-03-26 02:22:53,493 INFO [Driver] org.apache.spark.SparkContext: Successfully stopped SparkContext
+2025-03-26 02:22:53,494 ERROR [Driver] org.apache.spark.deploy.yarn.ApplicationMaster: User class threw exception: java.lang.IllegalArgumentException: requirement failed: The value of spark.network.timeout=120000ms must be greater than the value of spark.executor.heartbeatInterval=1000000ms.
+java.lang.IllegalArgumentException: requirement failed: The value of spark.network.timeout=120000ms must be greater than the value of spark.executor.heartbeatInterval=1000000ms.
+	at scala.Predef$.require(Predef.scala:281)
+	at org.apache.spark.SparkConf.validateSettings(SparkConf.scala:571)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:392)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+2025-03-26 02:22:53,495 INFO [Driver] org.apache.spark.deploy.yarn.ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User class threw exception: java.lang.IllegalArgumentException: requirement failed: The value of spark.network.timeout=120000ms must be greater than the value of spark.executor.heartbeatInterval=1000000ms.
+	at scala.Predef$.require(Predef.scala:281)
+	at org.apache.spark.SparkConf.validateSettings(SparkConf.scala:571)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:392)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+)
+2025-03-26 02:22:53,506 ERROR [main] org.apache.spark.deploy.yarn.ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:511)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:275)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:926)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:925)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:925)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+Caused by: java.lang.IllegalArgumentException: requirement failed: The value of spark.network.timeout=120000ms must be greater than the value of spark.executor.heartbeatInterval=1000000ms.
+	at scala.Predef$.require(Predef.scala:281)
+	at org.apache.spark.SparkConf.validateSettings(SparkConf.scala:571)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:392)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+2025-03-26 02:22:53,513 INFO [shutdown-hook-0] org.apache.spark.deploy.yarn.ApplicationMaster: Deleting staging directory hdfs://master:9000/user/root/.sparkStaging/application_1742955712061_0001
+2025-03-26 02:22:53,536 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Starting: Acquiring creator semaphore for hdfs://master:9000/user/root/.sparkStaging/application_1742955712061_0001
+2025-03-26 02:22:53,536 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Acquiring creator semaphore for hdfs://master:9000/user/root/.sparkStaging/application_1742955712061_0001: duration 0:00.002s
+2025-03-26 02:22:53,537 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Starting: Creating FS hdfs://master:9000/user/root/.sparkStaging/application_1742955712061_0001
+2025-03-26 02:22:53,537 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Loading filesystems
+2025-03-26 02:22:53,548 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.fs.LocalFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,551 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,552 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: har:// = class org.apache.hadoop.fs.HarFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,553 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,554 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,558 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,562 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,566 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:22:53,568 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: nullscan:// = class org.apache.hadoop.hive.ql.io.NullScanFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hive-exec-2.3.9-core.jar
+2025-03-26 02:22:53,568 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__8016539645680948795.zip/hive-exec-2.3.9-core.jar
+2025-03-26 02:22:53,569 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Looking for FS supporting hdfs
+2025-03-26 02:22:53,569 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: looking for configuration option fs.hdfs.impl
+2025-03-26 02:22:53,581 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Looking in service filesystems for implementation class
+2025-03-26 02:22:53,581 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2025-03-26 02:22:53,597 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.use.legacy.blockreader.local = false
+2025-03-26 02:22:53,598 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.read.shortcircuit = false
+2025-03-26 02:22:53,598 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.domain.socket.data.traffic = false
+2025-03-26 02:22:53,598 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.domain.socket.path = 
+2025-03-26 02:22:53,603 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.DFSClient: Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2025-03-26 02:22:53,607 DEBUG [shutdown-hook-0] org.apache.hadoop.io.retry.RetryUtils: multipleLinearRandomRetry = null
+2025-03-26 02:22:53,617 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Server: rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine2$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker@22d30544
+2025-03-26 02:22:53,623 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: getting client out of cache: Client-991c928f18e64e2d904439dc65dfea0f
+2025-03-26 02:22:53,806 DEBUG [shutdown-hook-0] org.apache.hadoop.util.PerformanceAdvisory: Both short-circuit local reads and UNIX domain socket are disabled.
+2025-03-26 02:22:53,810 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil: DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2025-03-26 02:22:53,811 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Creating FS hdfs://master:9000/user/root/.sparkStaging/application_1742955712061_0001: duration 0:00.274s
+2025-03-26 02:22:53,877 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: The ping interval is 60000 ms.
+2025-03-26 02:22:53,877 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: Connecting to master/172.20.1.14:9000
+2025-03-26 02:22:53,878 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: Setup connection to master/172.20.1.14:9000
+2025-03-26 02:22:53,886 DEBUG [shutdown-hook-0] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.hadoop.ipc.Client$Connection$2@3f4b64e]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1875)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:839)
+	at org.apache.hadoop.ipc.Client$Connection.access$3800(Client.java:414)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1677)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1502)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1455)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:242)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:129)
+	at com.sun.proxy.$Proxy26.delete(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.delete(ClientNamenodeProtocolTranslatorPB.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:422)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:165)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:157)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:95)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:359)
+	at com.sun.proxy.$Proxy27.delete(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.delete(DFSClient.java:1662)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:992)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:989)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.delete(DistributedFileSystem.java:999)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.cleanupStagingDir(ApplicationMaster.scala:686)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.$anonfun$run$2(ApplicationMaster.scala:265)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2066)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2025-03-26 02:22:53,940 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Sending sasl message state: NEGOTIATE
+
+2025-03-26 02:22:53,943 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Get token info proto:interface org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolPB info:@org.apache.hadoop.security.token.TokenInfo(value=class org.apache.hadoop.hdfs.security.token.delegation.DelegationTokenSelector)
+2025-03-26 02:22:53,943 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: tokens aren't supported for this protocol or user doesn't have one
+2025-03-26 02:22:53,943 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Use SIMPLE authentication for protocol ClientNamenodeProtocolPB
+2025-03-26 02:22:53,945 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Sending sasl message state: INITIATE
+auths {
+  method: "SIMPLE"
+  mechanism: ""
+}
+
+2025-03-26 02:22:53,948 DEBUG [IPC Client (569937641) connection to master/172.20.1.14:9000 from root] org.apache.hadoop.ipc.Client: IPC Client (569937641) connection to master/172.20.1.14:9000 from root: starting, having connections 1
+2025-03-26 02:22:53,950 DEBUG [IPC Parameter Sending Thread #0] org.apache.hadoop.ipc.Client: IPC Client (569937641) connection to master/172.20.1.14:9000 from root sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete
+2025-03-26 02:22:54,028 DEBUG [IPC Client (569937641) connection to master/172.20.1.14:9000 from root] org.apache.hadoop.ipc.Client: IPC Client (569937641) connection to master/172.20.1.14:9000 from root got value #0
+2025-03-26 02:22:54,032 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.ProtobufRpcEngine2: Call: delete took 215ms
+2025-03-26 02:22:54,034 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Shutdown hook called
+2025-03-26 02:22:54,035 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: Completed shutdown in 0.524 seconds; Timeouts: 0
+2025-03-26 02:22:54,057 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: ShutdownHookManager completed shutdown.

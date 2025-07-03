@@ -1,0 +1,198 @@
+program=ml.DeveloperApiExample
+SPARKLORD_MODE=CONFIG_INJECTION
+cpu_cores=2
+cpu_util=200
+memory=4g
+config_file_name=spark-defaults.conf
+config_key=spark.ui.retainedTasks
+config_value=200000
+
+2025-03-25 14:15:46,325 INFO [main] org.apache.spark.executor.CoarseGrainedExecutorBackend: Started daemon with process name: 1300@slave2
+2025-03-25 14:15:46,334 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for TERM
+2025-03-25 14:15:46,334 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for HUP
+2025-03-25 14:15:46,334 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for INT
+2025-03-25 14:15:46,747 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[GetGroups])
+2025-03-25 14:15:46,752 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2025-03-25 14:15:46,753 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2025-03-25 14:15:46,753 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since last successful login])
+2025-03-25 14:15:46,753 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, always=false, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since startup])
+2025-03-25 14:15:46,754 DEBUG [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: UgiMetrics, User and group related metrics
+2025-03-25 14:15:46,779 DEBUG [main] org.apache.hadoop.util.Shell: setsid exited with exit code 0
+2025-03-25 14:15:46,779 DEBUG [main] org.apache.hadoop.security.SecurityUtil: Setting hadoop.security.token.service.use_ip to true
+2025-03-25 14:15:46,783 DEBUG [main] org.apache.hadoop.security.Groups:  Creating new Groups object
+2025-03-25 14:15:46,784 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+2025-03-25 14:15:46,785 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2025-03-25 14:15:46,785 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-03-25 14:15:46,785 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-03-25 14:15:46,785 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Falling back to shell based
+2025-03-25 14:15:46,786 DEBUG [main] org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2025-03-25 14:15:46,854 DEBUG [main] org.apache.hadoop.security.Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2025-03-25 14:15:46,857 DEBUG [main] org.apache.spark.deploy.SparkHadoopUtil: creating UGI for user: root
+2025-03-25 14:15:46,861 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Hadoop login
+2025-03-25 14:15:46,861 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: hadoop login commit
+2025-03-25 14:15:46,863 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using local user: UnixPrincipal: root
+2025-03-25 14:15:46,865 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using user: "UnixPrincipal: root" with name: root
+2025-03-25 14:15:46,865 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: User entry: "root"
+2025-03-25 14:15:46,865 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Reading credentials from location /data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/container_tokens
+2025-03-25 14:15:46,872 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Loaded 1 tokens from /data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/container_tokens
+2025-03-25 14:15:46,873 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: UGI loginUser: root (auth:SIMPLE)
+2025-03-25 14:15:46,873 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.spark.deploy.SparkHadoopUtil$$anon$1@59d2400d]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1875)
+	at org.apache.spark.deploy.SparkHadoopUtil.runAsSparkUser(SparkHadoopUtil.scala:61)
+	at org.apache.spark.executor.CoarseGrainedExecutorBackend$.run(CoarseGrainedExecutorBackend.scala:427)
+	at org.apache.spark.executor.YarnCoarseGrainedExecutorBackend$.main(YarnCoarseGrainedExecutorBackend.scala:83)
+	at org.apache.spark.executor.YarnCoarseGrainedExecutorBackend.main(YarnCoarseGrainedExecutorBackend.scala)
+2025-03-25 14:15:46,891 INFO [main] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-25 14:15:46,892 INFO [main] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-25 14:15:46,892 INFO [main] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-25 14:15:46,893 INFO [main] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-25 14:15:46,894 INFO [main] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-25 14:15:46,996 DEBUG [main] io.netty.util.internal.logging.InternalLoggerFactory: Using SLF4J as the default logging framework
+2025-03-25 14:15:47,001 DEBUG [main] io.netty.util.internal.InternalThreadLocalMap: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2025-03-25 14:15:47,001 DEBUG [main] io.netty.util.internal.InternalThreadLocalMap: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2025-03-25 14:15:47,011 DEBUG [main] io.netty.channel.MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 4
+2025-03-25 14:15:47,036 DEBUG [main] io.netty.util.internal.PlatformDependent0: -Dio.netty.noUnsafe: false
+2025-03-25 14:15:47,037 DEBUG [main] io.netty.util.internal.PlatformDependent0: Java version: 8
+2025-03-25 14:15:47,037 DEBUG [main] io.netty.util.internal.PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+2025-03-25 14:15:47,038 DEBUG [main] io.netty.util.internal.PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+2025-03-25 14:15:47,038 DEBUG [main] io.netty.util.internal.PlatformDependent0: java.nio.Buffer.address: available
+2025-03-25 14:15:47,038 DEBUG [main] io.netty.util.internal.PlatformDependent0: direct buffer constructor: available
+2025-03-25 14:15:47,039 DEBUG [main] io.netty.util.internal.PlatformDependent0: java.nio.Bits.unaligned: available, true
+2025-03-25 14:15:47,039 DEBUG [main] io.netty.util.internal.PlatformDependent0: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2025-03-25 14:15:47,039 DEBUG [main] io.netty.util.internal.PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+2025-03-25 14:15:47,039 DEBUG [main] io.netty.util.internal.PlatformDependent: sun.misc.Unsafe: available
+2025-03-25 14:15:47,039 DEBUG [main] io.netty.util.internal.PlatformDependent: -Dio.netty.tmpdir: /data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/tmp (java.io.tmpdir)
+2025-03-25 14:15:47,039 DEBUG [main] io.netty.util.internal.PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2025-03-25 14:15:47,040 DEBUG [main] io.netty.util.internal.PlatformDependent: -Dio.netty.maxDirectMemory: 1908932608 bytes
+2025-03-25 14:15:47,040 DEBUG [main] io.netty.util.internal.PlatformDependent: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2025-03-25 14:15:47,041 DEBUG [main] io.netty.util.internal.CleanerJava6: java.nio.ByteBuffer.cleaner(): available
+2025-03-25 14:15:47,041 DEBUG [main] io.netty.util.internal.PlatformDependent: -Dio.netty.noPreferDirect: false
+2025-03-25 14:15:47,042 DEBUG [main] io.netty.channel.nio.NioEventLoop: -Dio.netty.noKeySetOptimization: false
+2025-03-25 14:15:47,042 DEBUG [main] io.netty.channel.nio.NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+2025-03-25 14:15:47,047 DEBUG [main] io.netty.util.internal.PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+2025-03-25 14:15:47,060 DEBUG [main] io.netty.util.ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+2025-03-25 14:15:47,060 DEBUG [main] io.netty.util.ResourceLeakDetector: -Dio.netty.leakDetection.targetRecords: 4
+2025-03-25 14:15:47,061 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 4
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 4
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.useCacheForAllThreads: true
+2025-03-25 14:15:47,062 DEBUG [main] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2025-03-25 14:15:47,107 DEBUG [netty-rpc-connection-0] org.apache.spark.network.client.TransportClientFactory: Creating new connection to slave0/172.20.1.15:40083
+2025-03-25 14:15:47,123 DEBUG [netty-rpc-connection-0] io.netty.channel.DefaultChannelId: -Dio.netty.processId: 1300 (auto-detected)
+2025-03-25 14:15:47,125 DEBUG [netty-rpc-connection-0] io.netty.util.NetUtil: -Djava.net.preferIPv4Stack: false
+2025-03-25 14:15:47,125 DEBUG [netty-rpc-connection-0] io.netty.util.NetUtil: -Djava.net.preferIPv6Addresses: false
+2025-03-25 14:15:47,127 DEBUG [netty-rpc-connection-0] io.netty.util.NetUtilInitializations: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2025-03-25 14:15:47,128 DEBUG [netty-rpc-connection-0] io.netty.util.NetUtil: /proc/sys/net/core/somaxconn: 4096
+2025-03-25 14:15:47,128 DEBUG [netty-rpc-connection-0] io.netty.channel.DefaultChannelId: -Dio.netty.machineId: 02:42:ac:ff:fe:14:01:11 (auto-detected)
+2025-03-25 14:15:47,151 DEBUG [netty-rpc-connection-0] io.netty.buffer.ByteBufUtil: -Dio.netty.allocator.type: pooled
+2025-03-25 14:15:47,151 DEBUG [netty-rpc-connection-0] io.netty.buffer.ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 0
+2025-03-25 14:15:47,151 DEBUG [netty-rpc-connection-0] io.netty.buffer.ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2025-03-25 14:15:47,178 DEBUG [rpc-client-1-1] io.netty.buffer.AbstractByteBuf: -Dio.netty.buffer.checkAccessible: true
+2025-03-25 14:15:47,178 DEBUG [rpc-client-1-1] io.netty.buffer.AbstractByteBuf: -Dio.netty.buffer.checkBounds: true
+2025-03-25 14:15:47,179 DEBUG [rpc-client-1-1] io.netty.util.ResourceLeakDetectorFactory: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@51a7d7cb
+2025-03-25 14:15:47,192 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6] REGISTERED
+2025-03-25 14:15:47,192 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6] CONNECT: slave0/172.20.1.15:40083
+2025-03-25 14:15:47,195 DEBUG [netty-rpc-connection-0] org.apache.spark.network.client.TransportClientFactory: Connection to slave0/172.20.1.15:40083 successful, running bootstraps...
+2025-03-25 14:15:47,195 INFO [netty-rpc-connection-0] org.apache.spark.network.client.TransportClientFactory: Successfully created connection to slave0/172.20.1.15:40083 after 79 ms (0 ms spent in bootstraps)
+2025-03-25 14:15:47,199 DEBUG [netty-rpc-connection-0] io.netty.util.Recycler: -Dio.netty.recycler.maxCapacityPerThread: 4096
+2025-03-25 14:15:47,200 DEBUG [netty-rpc-connection-0] io.netty.util.Recycler: -Dio.netty.recycler.ratio: 8
+2025-03-25 14:15:47,200 DEBUG [netty-rpc-connection-0] io.netty.util.Recycler: -Dio.netty.recycler.chunkSize: 32
+2025-03-25 14:15:47,200 DEBUG [netty-rpc-connection-0] io.netty.util.Recycler: -Dio.netty.recycler.blocking: false
+2025-03-25 14:15:47,201 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] ACTIVE
+2025-03-25 14:15:47,210 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 168]
+2025-03-25 14:15:47,211 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,214 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,223 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,225 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 169]
+2025-03-25 14:15:47,225 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,228 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] READ 2048B
+2025-03-25 14:15:47,230 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] READ 2329B
+2025-03-25 14:15:47,259 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,260 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 - R:slave0/172.20.1.15:40083] CLOSE
+2025-03-25 14:15:47,261 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 ! R:slave0/172.20.1.15:40083] INACTIVE
+2025-03-25 14:15:47,261 DEBUG [rpc-client-1-1] org.apache.spark.network.util.NettyLogger: [id: 0xd63a4ab6, L:/172.20.1.17:44222 ! R:slave0/172.20.1.15:40083] UNREGISTERED
+2025-03-25 14:15:47,277 INFO [main] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-25 14:15:47,278 INFO [main] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-25 14:15:47,278 INFO [main] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-25 14:15:47,278 INFO [main] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-25 14:15:47,278 INFO [main] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-25 14:15:47,301 DEBUG [main] org.apache.spark.SparkEnv: Using serializer: class org.apache.spark.serializer.JavaSerializer
+2025-03-25 14:15:47,325 DEBUG [netty-rpc-connection-0] org.apache.spark.network.client.TransportClientFactory: Creating new connection to slave0/172.20.1.15:40083
+2025-03-25 14:15:47,330 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239] REGISTERED
+2025-03-25 14:15:47,330 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239] CONNECT: slave0/172.20.1.15:40083
+2025-03-25 14:15:47,331 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] ACTIVE
+2025-03-25 14:15:47,331 DEBUG [netty-rpc-connection-0] org.apache.spark.network.client.TransportClientFactory: Connection to slave0/172.20.1.15:40083 successful, running bootstraps...
+2025-03-25 14:15:47,331 INFO [netty-rpc-connection-0] org.apache.spark.network.client.TransportClientFactory: Successfully created connection to slave0/172.20.1.15:40083 after 5 ms (0 ms spent in bootstraps)
+2025-03-25 14:15:47,331 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 162]
+2025-03-25 14:15:47,331 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,333 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,333 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,373 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 164]
+2025-03-25 14:15:47,373 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,374 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,375 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,377 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 173]
+2025-03-25 14:15:47,377 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,378 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,379 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,400 INFO [main] org.apache.spark.storage.DiskBlockManager: Created local directory at /data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/blockmgr-1248abc0-8fec-4397-9c2e-b9a482ad0414
+2025-03-25 14:15:47,403 DEBUG [main] org.apache.spark.storage.DiskBlockManager: Adding shutdown hook
+2025-03-25 14:15:47,405 DEBUG [main] org.apache.spark.util.ShutdownHookManager: Adding shutdown hook
+2025-03-25 14:15:47,444 INFO [main] org.apache.spark.storage.memory.MemoryStore: MemoryStore started with capacity 912.3 MiB
+2025-03-25 14:15:47,673 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 169]
+2025-03-25 14:15:47,673 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,675 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,676 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,701 INFO [dispatcher-Executor] org.apache.spark.executor.YarnCoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@slave0:40083
+2025-03-25 14:15:47,737 DEBUG [dispatcher-Executor] org.apache.spark.executor.YarnCoarseGrainedExecutorBackend: Resource profile id is: 0
+2025-03-25 14:15:47,745 INFO [dispatcher-Executor] org.apache.spark.resource.ResourceUtils: ==============================================================
+2025-03-25 14:15:47,745 INFO [dispatcher-Executor] org.apache.spark.resource.ResourceUtils: No custom resources configured for spark.executor.
+2025-03-25 14:15:47,746 INFO [dispatcher-Executor] org.apache.spark.resource.ResourceUtils: ==============================================================
+2025-03-25 14:15:47,747 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 168]
+2025-03-25 14:15:47,747 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,748 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,783 DEBUG [rpc-client-3-1] org.apache.spark.util.YarnContainerInfoHelper: Base URL for logs: http://slave2:8042/node/containerlogs/container_1742912085153_0001_01_000003/root
+2025-03-25 14:15:47,814 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 1916]
+2025-03-25 14:15:47,814 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,815 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,817 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,819 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,821 INFO [dispatcher-Executor] org.apache.spark.executor.YarnCoarseGrainedExecutorBackend: Successfully registered with driver
+2025-03-25 14:15:47,826 INFO [dispatcher-Executor] org.apache.spark.executor.Executor: Starting executor ID 2 on host slave2
+2025-03-25 14:15:47,888 DEBUG [dispatcher-Executor] org.apache.spark.network.server.TransportServer: Shuffle server started on port: 39113
+2025-03-25 14:15:47,889 INFO [dispatcher-Executor] org.apache.spark.util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39113.
+2025-03-25 14:15:47,889 INFO [dispatcher-Executor] org.apache.spark.network.netty.NettyBlockTransferService: Server created on slave2:39113
+2025-03-25 14:15:47,891 INFO [dispatcher-Executor] org.apache.spark.storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-03-25 14:15:47,899 INFO [dispatcher-Executor] org.apache.spark.storage.BlockManagerMaster: Registering BlockManager BlockManagerId(2, slave2, 39113, None)
+2025-03-25 14:15:47,905 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 1456]
+2025-03-25 14:15:47,906 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,908 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 100B
+2025-03-25 14:15:47,909 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,910 INFO [dispatcher-Executor] org.apache.spark.storage.BlockManagerMaster: Registered BlockManager BlockManagerId(2, slave2, 39113, None)
+2025-03-25 14:15:47,912 INFO [dispatcher-Executor] org.apache.spark.storage.BlockManager: Initialized BlockManager: BlockManagerId(2, slave2, 39113, None)
+2025-03-25 14:15:47,925 INFO [dispatcher-Executor] org.apache.spark.executor.Executor: Starting executor with user classpath (userClassPathFirst = false): 'file:/data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/__app__.jar,file:/data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/spark-examples_2.12-3.3.2.jar,file:/data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/__app__.jar,file:/data/tmp/nm-local-dir/usercache/root/appcache/application_1742912085153_0001/container_1742912085153_0001_01_000003/spark-examples_2.12-3.3.2.jar'
+2025-03-25 14:15:47,932 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 21, bodyLength: 163]
+2025-03-25 14:15:47,932 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:47,933 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 68B
+2025-03-25 14:15:47,934 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:47,959 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] WRITE: MessageWithHeader [headerLength: 13, bodyLength: 177]
+2025-03-25 14:15:47,960 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] FLUSH
+2025-03-25 14:15:53,831 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ 135B
+2025-03-25 14:15:53,833 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] READ COMPLETE
+2025-03-25 14:15:53,844 INFO [dispatcher-Executor] org.apache.spark.executor.YarnCoarseGrainedExecutorBackend: Driver commanded a shutdown
+2025-03-25 14:15:53,857 INFO [CoarseGrainedExecutorBackend-stop-executor] org.apache.spark.storage.memory.MemoryStore: MemoryStore cleared
+2025-03-25 14:15:53,857 INFO [CoarseGrainedExecutorBackend-stop-executor] org.apache.spark.storage.BlockManager: BlockManager stopped
+2025-03-25 14:15:53,858 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 - R:slave0/172.20.1.15:40083] CLOSE
+2025-03-25 14:15:53,858 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 ! R:slave0/172.20.1.15:40083] INACTIVE
+2025-03-25 14:15:53,859 DEBUG [rpc-client-3-1] org.apache.spark.network.util.NettyLogger: [id: 0x880a2239, L:/172.20.1.17:44224 ! R:slave0/172.20.1.15:40083] UNREGISTERED
+2025-03-25 14:15:53,870 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Shutdown hook called
+2025-03-25 14:15:53,871 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: Completed shutdown in 0.003 seconds; Timeouts: 0
+2025-03-25 14:15:53,880 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: ShutdownHookManager completed shutdown.

@@ -1,0 +1,295 @@
+program=ml.DeveloperApiExample
+SPARKLORD_MODE=CONFIG_INJECTION
+cpu_cores=2
+cpu_util=200
+memory=4g
+config_file_name=spark-defaults.conf
+config_key=spark.kryoserializer.buffer
+config_value=64g
+
+2025-03-26 02:29:09,166 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for TERM
+2025-03-26 02:29:09,169 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for HUP
+2025-03-26 02:29:09,170 INFO [main] org.apache.spark.util.SignalUtils: Registering signal handler for INT
+2025-03-26 02:29:09,398 DEBUG [main] org.apache.hadoop.util.Shell: setsid exited with exit code 0
+2025-03-26 02:29:09,507 INFO [main] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-26 02:29:09,507 INFO [main] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-26 02:29:09,509 INFO [main] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-26 02:29:09,509 INFO [main] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-26 02:29:09,510 INFO [main] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-26 02:29:09,560 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[GetGroups])
+2025-03-26 02:29:09,565 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2025-03-26 02:29:09,565 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2025-03-26 02:29:09,565 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since last successful login])
+2025-03-26 02:29:09,565 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since startup])
+2025-03-26 02:29:09,566 DEBUG [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: UgiMetrics, User and group related metrics
+2025-03-26 02:29:09,581 DEBUG [main] org.apache.hadoop.security.SecurityUtil: Setting hadoop.security.token.service.use_ip to true
+2025-03-26 02:29:09,584 DEBUG [main] org.apache.hadoop.security.Groups:  Creating new Groups object
+2025-03-26 02:29:09,585 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+2025-03-26 02:29:09,585 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2025-03-26 02:29:09,585 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-03-26 02:29:09,585 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-03-26 02:29:09,585 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Falling back to shell based
+2025-03-26 02:29:09,586 DEBUG [main] org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2025-03-26 02:29:09,627 DEBUG [main] org.apache.hadoop.security.Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2025-03-26 02:29:09,691 DEBUG [main] org.apache.spark.deploy.SparkHadoopUtil: creating UGI for user: root
+2025-03-26 02:29:09,693 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Hadoop login
+2025-03-26 02:29:09,694 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: hadoop login commit
+2025-03-26 02:29:09,695 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using local user: UnixPrincipal: root
+2025-03-26 02:29:09,695 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using user: "UnixPrincipal: root" with name: root
+2025-03-26 02:29:09,695 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: User entry: "root"
+2025-03-26 02:29:09,696 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Reading credentials from location /data/tmp/nm-local-dir/usercache/root/appcache/application_1742956091987_0001/container_1742956091987_0001_02_000001/container_tokens
+2025-03-26 02:29:09,699 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Loaded 1 tokens from /data/tmp/nm-local-dir/usercache/root/appcache/application_1742956091987_0001/container_1742956091987_0001_02_000001/container_tokens
+2025-03-26 02:29:09,699 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: UGI loginUser: root (auth:SIMPLE)
+2025-03-26 02:29:09,699 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3@1522d8a0]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1875)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:925)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+2025-03-26 02:29:09,704 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: ApplicationAttemptId: appattempt_1742956091987_0001_000002
+2025-03-26 02:29:09,705 DEBUG [main] org.apache.spark.util.ShutdownHookManager: Adding shutdown hook
+2025-03-26 02:29:09,724 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: Starting the user application in a separate Thread
+2025-03-26 02:29:09,726 INFO [main] org.apache.spark.deploy.yarn.ApplicationMaster: Waiting for spark context initialization...
+2025-03-26 02:29:09,762 INFO [Driver] org.apache.spark.SparkContext: Running Spark version 3.3.2
+2025-03-26 02:29:09,777 INFO [Driver] org.apache.spark.resource.ResourceUtils: ==============================================================
+2025-03-26 02:29:09,778 INFO [Driver] org.apache.spark.resource.ResourceUtils: No custom resources configured for spark.driver.
+2025-03-26 02:29:09,778 INFO [Driver] org.apache.spark.resource.ResourceUtils: ==============================================================
+2025-03-26 02:29:09,778 INFO [Driver] org.apache.spark.SparkContext: Submitted application: DeveloperApiExample
+2025-03-26 02:29:09,789 INFO [Driver] org.apache.spark.resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2025-03-26 02:29:09,792 INFO [Driver] org.apache.spark.resource.ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+2025-03-26 02:29:09,794 INFO [Driver] org.apache.spark.resource.ResourceProfileManager: Added ResourceProfile id: 0
+2025-03-26 02:29:09,819 INFO [Driver] org.apache.spark.SecurityManager: Changing view acls to: root
+2025-03-26 02:29:09,819 INFO [Driver] org.apache.spark.SecurityManager: Changing modify acls to: root
+2025-03-26 02:29:09,819 INFO [Driver] org.apache.spark.SecurityManager: Changing view acls groups to: 
+2025-03-26 02:29:09,819 INFO [Driver] org.apache.spark.SecurityManager: Changing modify acls groups to: 
+2025-03-26 02:29:09,819 INFO [Driver] org.apache.spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2025-03-26 02:29:09,850 DEBUG [Driver] io.netty.util.internal.logging.InternalLoggerFactory: Using SLF4J as the default logging framework
+2025-03-26 02:29:09,853 DEBUG [Driver] io.netty.util.internal.InternalThreadLocalMap: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2025-03-26 02:29:09,853 DEBUG [Driver] io.netty.util.internal.InternalThreadLocalMap: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2025-03-26 02:29:09,858 DEBUG [Driver] io.netty.channel.MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 4
+2025-03-26 02:29:09,874 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: -Dio.netty.noUnsafe: false
+2025-03-26 02:29:09,874 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: Java version: 8
+2025-03-26 02:29:09,874 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+2025-03-26 02:29:09,874 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+2025-03-26 02:29:09,874 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: java.nio.Buffer.address: available
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: direct buffer constructor: available
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: java.nio.Bits.unaligned: available, true
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent: sun.misc.Unsafe: available
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.tmpdir: /data/tmp/nm-local-dir/usercache/root/appcache/application_1742956091987_0001/container_1742956091987_0001_02_000001/tmp (java.io.tmpdir)
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.maxDirectMemory: 3817865216 bytes
+2025-03-26 02:29:09,875 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2025-03-26 02:29:09,876 DEBUG [Driver] io.netty.util.internal.CleanerJava6: java.nio.ByteBuffer.cleaner(): available
+2025-03-26 02:29:09,876 DEBUG [Driver] io.netty.util.internal.PlatformDependent: -Dio.netty.noPreferDirect: false
+2025-03-26 02:29:09,876 DEBUG [Driver] io.netty.channel.nio.NioEventLoop: -Dio.netty.noKeySetOptimization: false
+2025-03-26 02:29:09,876 DEBUG [Driver] io.netty.channel.nio.NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+2025-03-26 02:29:09,879 DEBUG [Driver] io.netty.util.internal.PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+2025-03-26 02:29:09,886 DEBUG [Driver] io.netty.util.ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+2025-03-26 02:29:09,886 DEBUG [Driver] io.netty.util.ResourceLeakDetector: -Dio.netty.leakDetection.targetRecords: 4
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 4
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 4
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.useCacheForAllThreads: true
+2025-03-26 02:29:09,887 DEBUG [Driver] io.netty.buffer.PooledByteBufAllocator: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2025-03-26 02:29:09,900 DEBUG [Driver] io.netty.channel.DefaultChannelId: -Dio.netty.processId: 1504 (auto-detected)
+2025-03-26 02:29:09,901 DEBUG [Driver] io.netty.util.NetUtil: -Djava.net.preferIPv4Stack: false
+2025-03-26 02:29:09,901 DEBUG [Driver] io.netty.util.NetUtil: -Djava.net.preferIPv6Addresses: false
+2025-03-26 02:29:09,902 DEBUG [Driver] io.netty.util.NetUtilInitializations: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+2025-03-26 02:29:09,902 DEBUG [Driver] io.netty.util.NetUtil: /proc/sys/net/core/somaxconn: 4096
+2025-03-26 02:29:09,903 DEBUG [Driver] io.netty.channel.DefaultChannelId: -Dio.netty.machineId: 02:42:ac:ff:fe:14:01:0f (auto-detected)
+2025-03-26 02:29:09,911 DEBUG [Driver] io.netty.buffer.ByteBufUtil: -Dio.netty.allocator.type: pooled
+2025-03-26 02:29:09,911 DEBUG [Driver] io.netty.buffer.ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 0
+2025-03-26 02:29:09,911 DEBUG [Driver] io.netty.buffer.ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2025-03-26 02:29:09,919 DEBUG [Driver] org.apache.spark.network.server.TransportServer: Shuffle server started on port: 35815
+2025-03-26 02:29:09,927 INFO [Driver] org.apache.spark.util.Utils: Successfully started service 'sparkDriver' on port 35815.
+2025-03-26 02:29:09,927 DEBUG [Driver] org.apache.spark.SparkEnv: Using serializer: class org.apache.spark.serializer.JavaSerializer
+2025-03-26 02:29:09,932 ERROR [Driver] org.apache.spark.SparkContext: Error initializing SparkContext.
+java.lang.IllegalArgumentException: spark.kryoserializer.buffer must be less than 2048 MiB, got: + 65536 MiB.
+	at org.apache.spark.serializer.KryoSerializer.<init>(KryoSerializer.scala:67)
+	at org.apache.spark.serializer.SerializerManager.<init>(SerializerManager.scala:43)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:281)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:194)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:279)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:464)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+2025-03-26 02:29:09,949 INFO [Driver] org.apache.spark.SparkContext: Successfully stopped SparkContext
+2025-03-26 02:29:09,949 ERROR [Driver] org.apache.spark.deploy.yarn.ApplicationMaster: User class threw exception: java.lang.IllegalArgumentException: spark.kryoserializer.buffer must be less than 2048 MiB, got: + 65536 MiB.
+java.lang.IllegalArgumentException: spark.kryoserializer.buffer must be less than 2048 MiB, got: + 65536 MiB.
+	at org.apache.spark.serializer.KryoSerializer.<init>(KryoSerializer.scala:67)
+	at org.apache.spark.serializer.SerializerManager.<init>(SerializerManager.scala:43)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:281)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:194)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:279)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:464)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+2025-03-26 02:29:09,950 INFO [Driver] org.apache.spark.deploy.yarn.ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User class threw exception: java.lang.IllegalArgumentException: spark.kryoserializer.buffer must be less than 2048 MiB, got: + 65536 MiB.
+	at org.apache.spark.serializer.KryoSerializer.<init>(KryoSerializer.scala:67)
+	at org.apache.spark.serializer.SerializerManager.<init>(SerializerManager.scala:43)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:281)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:194)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:279)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:464)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+)
+2025-03-26 02:29:09,954 ERROR [main] org.apache.spark.deploy.yarn.ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:511)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:275)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:926)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:925)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1878)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:925)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala)
+Caused by: java.lang.IllegalArgumentException: spark.kryoserializer.buffer must be less than 2048 MiB, got: + 65536 MiB.
+	at org.apache.spark.serializer.KryoSerializer.<init>(KryoSerializer.scala:67)
+	at org.apache.spark.serializer.SerializerManager.<init>(SerializerManager.scala:43)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:281)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:194)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:279)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:464)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2714)
+	at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:953)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+	at org.apache.spark.examples.ml.DeveloperApiExample$.main(DeveloperApiExample.scala:42)
+	at org.apache.spark.examples.ml.DeveloperApiExample.main(DeveloperApiExample.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:739)
+2025-03-26 02:29:09,956 INFO [shutdown-hook-0] org.apache.spark.deploy.yarn.ApplicationMaster: Deleting staging directory hdfs://master:9000/user/root/.sparkStaging/application_1742956091987_0001
+2025-03-26 02:29:09,977 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Starting: Acquiring creator semaphore for hdfs://master:9000/user/root/.sparkStaging/application_1742956091987_0001
+2025-03-26 02:29:09,977 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Acquiring creator semaphore for hdfs://master:9000/user/root/.sparkStaging/application_1742956091987_0001: duration 0:00.000s
+2025-03-26 02:29:09,978 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Starting: Creating FS hdfs://master:9000/user/root/.sparkStaging/application_1742956091987_0001
+2025-03-26 02:29:09,978 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Loading filesystems
+2025-03-26 02:29:09,985 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.fs.LocalFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:09,987 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:09,989 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: har:// = class org.apache.hadoop.fs.HarFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:09,989 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:09,990 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:09,996 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:10,000 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:10,000 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hadoop-client-api-3.3.2.jar
+2025-03-26 02:29:10,001 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: nullscan:// = class org.apache.hadoop.hive.ql.io.NullScanFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hive-exec-2.3.9-core.jar
+2025-03-26 02:29:10,002 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem from /data/tmp/nm-local-dir/usercache/root/filecache/10/__spark_libs__3885664656720197061.zip/hive-exec-2.3.9-core.jar
+2025-03-26 02:29:10,002 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Looking for FS supporting hdfs
+2025-03-26 02:29:10,002 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: looking for configuration option fs.hdfs.impl
+2025-03-26 02:29:10,015 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Looking in service filesystems for implementation class
+2025-03-26 02:29:10,015 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2025-03-26 02:29:10,025 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.use.legacy.blockreader.local = false
+2025-03-26 02:29:10,025 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.read.shortcircuit = false
+2025-03-26 02:29:10,025 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.domain.socket.data.traffic = false
+2025-03-26 02:29:10,025 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.domain.socket.path = 
+2025-03-26 02:29:10,029 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.DFSClient: Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2025-03-26 02:29:10,032 DEBUG [shutdown-hook-0] org.apache.hadoop.io.retry.RetryUtils: multipleLinearRandomRetry = null
+2025-03-26 02:29:10,040 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Server: rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine2$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker@75bb8cc
+2025-03-26 02:29:10,045 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: getting client out of cache: Client-075a009fec9546e9a7def7bbb0bf0a4a
+2025-03-26 02:29:10,239 DEBUG [shutdown-hook-0] org.apache.hadoop.util.PerformanceAdvisory: Both short-circuit local reads and UNIX domain socket are disabled.
+2025-03-26 02:29:10,242 DEBUG [shutdown-hook-0] org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil: DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2025-03-26 02:29:10,244 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: Creating FS hdfs://master:9000/user/root/.sparkStaging/application_1742956091987_0001: duration 0:00.266s
+2025-03-26 02:29:10,265 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: The ping interval is 60000 ms.
+2025-03-26 02:29:10,265 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: Connecting to master/172.20.1.14:9000
+2025-03-26 02:29:10,265 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: Setup connection to master/172.20.1.14:9000
+2025-03-26 02:29:10,268 DEBUG [shutdown-hook-0] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.hadoop.ipc.Client$Connection$2@70371773]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1875)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:839)
+	at org.apache.hadoop.ipc.Client$Connection.access$3800(Client.java:414)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1677)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1502)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1455)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:242)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine2$Invoker.invoke(ProtobufRpcEngine2.java:129)
+	at com.sun.proxy.$Proxy29.delete(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.delete(ClientNamenodeProtocolTranslatorPB.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:422)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeMethod(RetryInvocationHandler.java:165)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invoke(RetryInvocationHandler.java:157)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler$Call.invokeOnce(RetryInvocationHandler.java:95)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:359)
+	at com.sun.proxy.$Proxy30.delete(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.delete(DFSClient.java:1662)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:992)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$19.doCall(DistributedFileSystem.java:989)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.delete(DistributedFileSystem.java:999)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.cleanupStagingDir(ApplicationMaster.scala:686)
+	at org.apache.spark.deploy.yarn.ApplicationMaster.$anonfun$run$2(ApplicationMaster.scala:265)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2066)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2025-03-26 02:29:10,318 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Sending sasl message state: NEGOTIATE
+
+2025-03-26 02:29:10,321 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Get token info proto:interface org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolPB info:@org.apache.hadoop.security.token.TokenInfo(value=class org.apache.hadoop.hdfs.security.token.delegation.DelegationTokenSelector)
+2025-03-26 02:29:10,321 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: tokens aren't supported for this protocol or user doesn't have one
+2025-03-26 02:29:10,321 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Use SIMPLE authentication for protocol ClientNamenodeProtocolPB
+2025-03-26 02:29:10,324 DEBUG [shutdown-hook-0] org.apache.hadoop.security.SaslRpcClient: Sending sasl message state: INITIATE
+auths {
+  method: "SIMPLE"
+  mechanism: ""
+}
+
+2025-03-26 02:29:10,332 DEBUG [IPC Client (2059484209) connection to master/172.20.1.14:9000 from root] org.apache.hadoop.ipc.Client: IPC Client (2059484209) connection to master/172.20.1.14:9000 from root: starting, having connections 1
+2025-03-26 02:29:10,332 DEBUG [IPC Parameter Sending Thread #0] org.apache.hadoop.ipc.Client: IPC Client (2059484209) connection to master/172.20.1.14:9000 from root sending #0 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete
+2025-03-26 02:29:10,339 DEBUG [IPC Client (2059484209) connection to master/172.20.1.14:9000 from root] org.apache.hadoop.ipc.Client: IPC Client (2059484209) connection to master/172.20.1.14:9000 from root got value #0
+2025-03-26 02:29:10,339 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.ProtobufRpcEngine2: Call: delete took 91ms
+2025-03-26 02:29:10,340 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Shutdown hook called
+2025-03-26 02:29:10,345 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: Completed shutdown in 0.390 seconds; Timeouts: 0
+2025-03-26 02:29:10,359 DEBUG [Thread-2] org.apache.hadoop.util.ShutdownHookManager: ShutdownHookManager completed shutdown.

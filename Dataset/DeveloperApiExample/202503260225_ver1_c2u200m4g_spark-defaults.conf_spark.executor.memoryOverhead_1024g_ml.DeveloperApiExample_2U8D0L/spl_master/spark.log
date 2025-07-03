@@ -1,0 +1,140 @@
+program=ml.DeveloperApiExample
+SPARKLORD_MODE=CONFIG_INJECTION
+cpu_cores=2
+cpu_util=200
+memory=4g
+config_file_name=spark-defaults.conf
+config_key=spark.executor.memoryOverhead
+config_value=1024g
+
+2025-03-26 02:26:58,711 DEBUG [main] org.apache.spark.util.ShutdownHookManager: Adding shutdown hook
+2025-03-26 02:26:58,739 DEBUG [main] org.apache.hadoop.util.Shell: setsid exited with exit code 0
+2025-03-26 02:26:58,779 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[GetGroups])
+2025-03-26 02:26:58,782 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)])
+2025-03-26 02:26:58,782 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)])
+2025-03-26 02:26:58,782 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeInt org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailures with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since last successful login])
+2025-03-26 02:26:58,782 DEBUG [main] org.apache.hadoop.metrics2.lib.MutableMetricsFactory: field private org.apache.hadoop.metrics2.lib.MutableGaugeLong org.apache.hadoop.security.UserGroupInformation$UgiMetrics.renewalFailuresTotal with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, valueName=Time, about=, interval=10, type=DEFAULT, value=[Renewal failures since startup])
+2025-03-26 02:26:58,783 DEBUG [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: UgiMetrics, User and group related metrics
+2025-03-26 02:26:58,790 DEBUG [main] org.apache.hadoop.security.SecurityUtil: Setting hadoop.security.token.service.use_ip to true
+2025-03-26 02:26:58,798 DEBUG [main] org.apache.hadoop.security.Groups:  Creating new Groups object
+2025-03-26 02:26:58,799 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+2025-03-26 02:26:58,799 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+2025-03-26 02:26:58,799 DEBUG [main] org.apache.hadoop.util.NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-03-26 02:26:58,799 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-03-26 02:26:58,799 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Falling back to shell based
+2025-03-26 02:26:58,800 DEBUG [main] org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+2025-03-26 02:26:58,837 DEBUG [main] org.apache.hadoop.security.Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2025-03-26 02:26:58,839 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Hadoop login
+2025-03-26 02:26:58,839 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: hadoop login commit
+2025-03-26 02:26:58,841 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using local user: UnixPrincipal: root
+2025-03-26 02:26:58,842 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: Using user: "UnixPrincipal: root" with name: root
+2025-03-26 02:26:58,842 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: User entry: "root"
+2025-03-26 02:26:58,842 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: UGI loginUser: root (auth:SIMPLE)
+2025-03-26 02:26:58,843 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Acquiring creator semaphore for file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-26 02:26:58,843 DEBUG [main] org.apache.hadoop.fs.FileSystem: Acquiring creator semaphore for file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar: duration 0:00.001s
+2025-03-26 02:26:58,843 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Creating FS file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-26 02:26:58,844 DEBUG [main] org.apache.hadoop.fs.FileSystem: Loading filesystems
+2025-03-26 02:26:58,850 DEBUG [main] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.fs.LocalFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,852 DEBUG [main] org.apache.hadoop.fs.FileSystem: viewfs:// = class org.apache.hadoop.fs.viewfs.ViewFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,853 DEBUG [main] org.apache.hadoop.fs.FileSystem: har:// = class org.apache.hadoop.fs.HarFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,854 DEBUG [main] org.apache.hadoop.fs.FileSystem: http:// = class org.apache.hadoop.fs.http.HttpFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,855 DEBUG [main] org.apache.hadoop.fs.FileSystem: https:// = class org.apache.hadoop.fs.http.HttpsFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,859 DEBUG [main] org.apache.hadoop.fs.FileSystem: hdfs:// = class org.apache.hadoop.hdfs.DistributedFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,864 DEBUG [main] org.apache.hadoop.fs.FileSystem: webhdfs:// = class org.apache.hadoop.hdfs.web.WebHdfsFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,864 DEBUG [main] org.apache.hadoop.fs.FileSystem: swebhdfs:// = class org.apache.hadoop.hdfs.web.SWebHdfsFileSystem from /spark/jars/hadoop-client-api-3.3.2.jar
+2025-03-26 02:26:58,865 DEBUG [main] org.apache.hadoop.fs.FileSystem: nullscan:// = class org.apache.hadoop.hive.ql.io.NullScanFileSystem from /spark/jars/hive-exec-2.3.9-core.jar
+2025-03-26 02:26:58,865 DEBUG [main] org.apache.hadoop.fs.FileSystem: file:// = class org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem from /spark/jars/hive-exec-2.3.9-core.jar
+2025-03-26 02:26:58,866 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking for FS supporting file
+2025-03-26 02:26:58,866 DEBUG [main] org.apache.hadoop.fs.FileSystem: looking for configuration option fs.file.impl
+2025-03-26 02:26:58,887 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking in service filesystems for implementation class
+2025-03-26 02:26:58,887 DEBUG [main] org.apache.hadoop.fs.FileSystem: FS for file is class org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem
+2025-03-26 02:26:58,889 DEBUG [main] org.apache.hadoop.fs.FileSystem: Creating FS file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar: duration 0:00.046s
+2025-03-26 02:26:58,890 DEBUG [main] org.apache.hadoop.fs.Globber: Created Globber for path=file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar, symlinks=true
+2025-03-26 02:26:58,890 DEBUG [main] org.apache.hadoop.fs.Globber: Starting: glob file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-26 02:26:58,890 DEBUG [main] org.apache.hadoop.fs.Globber: Filesystem glob /spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-26 02:26:58,890 DEBUG [main] org.apache.hadoop.fs.Globber: Pattern: /spark/examples/jars/spark-examples_2.12-3.3.2.jar
+2025-03-26 02:26:58,908 DEBUG [main] org.apache.hadoop.fs.Globber: Component spark, patterned=false
+2025-03-26 02:26:58,908 DEBUG [main] org.apache.hadoop.fs.Globber: Component examples, patterned=false
+2025-03-26 02:26:58,908 DEBUG [main] org.apache.hadoop.fs.Globber: Component jars, patterned=false
+2025-03-26 02:26:58,910 DEBUG [main] org.apache.hadoop.fs.Globber: Component spark-examples_2.12-3.3.2.jar, patterned=false
+2025-03-26 02:26:58,910 DEBUG [main] org.apache.hadoop.fs.Globber: glob file:/spark/examples/jars/spark-examples_2.12-3.3.2.jar: duration 0:00.020s
+2025-03-26 02:26:58,961 DEBUG [main] org.apache.hadoop.service.AbstractService: Service: org.apache.hadoop.yarn.client.api.impl.YarnClientImpl entered state INITED
+2025-03-26 02:26:58,986 INFO [main] org.apache.hadoop.yarn.client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master/172.20.1.14:8032
+2025-03-26 02:26:58,987 DEBUG [main] org.apache.hadoop.security.UserGroupInformation: PrivilegedAction [as: root (auth:SIMPLE)][action: org.apache.hadoop.yarn.client.RMProxy$1@184497d1]
+java.lang.Exception
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1852)
+	at org.apache.hadoop.yarn.client.RMProxy.getProxy(RMProxy.java:145)
+	at org.apache.hadoop.yarn.client.DefaultNoHARMFailoverProxyProvider.init(DefaultNoHARMFailoverProxyProvider.java:65)
+	at org.apache.hadoop.yarn.client.RMProxy.createNonHaRMFailoverProxyProvider(RMProxy.java:172)
+	at org.apache.hadoop.yarn.client.RMProxy.newProxyInstance(RMProxy.java:132)
+	at org.apache.hadoop.yarn.client.RMProxy.createRMProxy(RMProxy.java:103)
+	at org.apache.hadoop.yarn.client.ClientRMProxy.createRMProxy(ClientRMProxy.java:73)
+	at org.apache.hadoop.yarn.client.api.impl.YarnClientImpl.serviceStart(YarnClientImpl.java:242)
+	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+	at org.apache.spark.deploy.yarn.Client.submitApplication(Client.scala:192)
+	at org.apache.spark.deploy.yarn.Client.run(Client.scala:1327)
+	at org.apache.spark.deploy.yarn.YarnClusterApplication.start(Client.scala:1764)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:958)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1046)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1055)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+2025-03-26 02:26:58,988 DEBUG [main] org.apache.hadoop.yarn.ipc.YarnRPC: Creating YarnRPC for org.apache.hadoop.yarn.ipc.HadoopYarnProtoRPC
+2025-03-26 02:26:58,988 DEBUG [main] org.apache.hadoop.yarn.ipc.HadoopYarnProtoRPC: Creating a HadoopYarnProtoRpc proxy for protocol interface org.apache.hadoop.yarn.api.ApplicationClientProtocol
+2025-03-26 02:26:59,003 DEBUG [main] org.apache.hadoop.ipc.Server: rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine2$RpcProtobufRequest, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine2$Server$ProtoBufRpcInvoker@3bde62ff
+2025-03-26 02:26:59,006 DEBUG [main] org.apache.hadoop.ipc.Client: getting client out of cache: Client-6fbd7dba631f45eb8150e15da234ea51
+2025-03-26 02:26:59,064 DEBUG [main] org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.yarn.client.api.impl.YarnClientImpl is started
+2025-03-26 02:26:59,104 DEBUG [main] org.apache.hadoop.ipc.Client: The ping interval is 60000 ms.
+2025-03-26 02:26:59,105 DEBUG [main] org.apache.hadoop.ipc.Client: Connecting to master/172.20.1.14:8032
+2025-03-26 02:26:59,105 DEBUG [main] org.apache.hadoop.ipc.Client: Setup connection to master/172.20.1.14:8032
+2025-03-26 02:26:59,114 DEBUG [IPC Client (546796969) connection to master/172.20.1.14:8032 from root] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:8032 from root: starting, having connections 1
+2025-03-26 02:26:59,115 DEBUG [IPC Parameter Sending Thread #0] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:8032 from root sending #0 org.apache.hadoop.yarn.api.ApplicationClientProtocolPB.getClusterMetrics
+2025-03-26 02:26:59,126 DEBUG [IPC Client (546796969) connection to master/172.20.1.14:8032 from root] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:8032 from root got value #0
+2025-03-26 02:26:59,126 DEBUG [main] org.apache.hadoop.ipc.ProtobufRpcEngine2: Call: getClusterMetrics took 45ms
+2025-03-26 02:26:59,128 DEBUG [main] org.apache.spark.deploy.yarn.Client: Requesting a new application from cluster with 3 NodeManagers
+2025-03-26 02:26:59,140 DEBUG [IPC Parameter Sending Thread #0] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:8032 from root sending #1 org.apache.hadoop.yarn.api.ApplicationClientProtocolPB.getNewApplication
+2025-03-26 02:26:59,149 DEBUG [IPC Client (546796969) connection to master/172.20.1.14:8032 from root] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:8032 from root got value #1
+2025-03-26 02:26:59,149 DEBUG [main] org.apache.hadoop.ipc.ProtobufRpcEngine2: Call: getNewApplication took 10ms
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Acquiring creator semaphore for hdfs://master:9000
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: Acquiring creator semaphore for hdfs://master:9000: duration 0:00.001s
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: Starting: Creating FS hdfs://master:9000
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking for FS supporting hdfs
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: looking for configuration option fs.hdfs.impl
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: Looking in service filesystems for implementation class
+2025-03-26 02:26:59,155 DEBUG [main] org.apache.hadoop.fs.FileSystem: FS for hdfs is class org.apache.hadoop.hdfs.DistributedFileSystem
+2025-03-26 02:26:59,167 DEBUG [main] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.use.legacy.blockreader.local = false
+2025-03-26 02:26:59,167 DEBUG [main] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.read.shortcircuit = false
+2025-03-26 02:26:59,167 DEBUG [main] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.client.domain.socket.data.traffic = false
+2025-03-26 02:26:59,167 DEBUG [main] org.apache.hadoop.hdfs.client.impl.DfsClientConf: dfs.domain.socket.path = 
+2025-03-26 02:26:59,170 DEBUG [main] org.apache.hadoop.hdfs.DFSClient: Sets dfs.client.block.write.replace-datanode-on-failure.min-replication to 0
+2025-03-26 02:26:59,173 DEBUG [main] org.apache.hadoop.io.retry.RetryUtils: multipleLinearRandomRetry = null
+2025-03-26 02:26:59,178 DEBUG [main] org.apache.hadoop.ipc.Client: getting client out of cache: Client-6fbd7dba631f45eb8150e15da234ea51
+2025-03-26 02:26:59,387 DEBUG [main] org.apache.hadoop.util.PerformanceAdvisory: Both short-circuit local reads and UNIX domain socket are disabled.
+2025-03-26 02:26:59,391 DEBUG [main] org.apache.hadoop.hdfs.protocol.datatransfer.sasl.DataTransferSaslUtil: DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2025-03-26 02:26:59,393 DEBUG [main] org.apache.hadoop.fs.FileSystem: Creating FS hdfs://master:9000: duration 0:00.238s
+2025-03-26 02:26:59,445 INFO [main] org.apache.hadoop.conf.Configuration: resource-types.xml not found
+2025-03-26 02:26:59,446 INFO [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-03-26 02:26:59,450 DEBUG [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+2025-03-26 02:26:59,450 DEBUG [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+2025-03-26 02:26:59,450 DEBUG [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Mandatory Resource 'yarn.resource-types.memory-mb.minimum-allocation' is not configured in resource-types config file. Setting allocation specified using 'yarn.scheduler.minimum-allocation-mb'
+2025-03-26 02:26:59,451 DEBUG [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Mandatory Resource 'yarn.resource-types.memory-mb.maximum-allocation' is not configured in resource-types config file. Setting allocation specified using 'yarn.scheduler.maximum-allocation-mb'
+2025-03-26 02:26:59,451 DEBUG [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Mandatory Resource 'yarn.resource-types.vcores.minimum-allocation' is not configured in resource-types config file. Setting allocation specified using 'yarn.scheduler.minimum-allocation-vcores'
+2025-03-26 02:26:59,451 DEBUG [main] org.apache.hadoop.yarn.util.resource.ResourceUtils: Mandatory Resource 'yarn.resource-types.vcores.maximum-allocation' is not configured in resource-types config file. Setting allocation specified using 'yarn.scheduler.maximum-allocation-vcores'
+2025-03-26 02:26:59,456 INFO [main] org.apache.spark.deploy.yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+2025-03-26 02:26:59,460 DEBUG [main] org.apache.hadoop.ipc.Client: The ping interval is 60000 ms.
+2025-03-26 02:26:59,460 DEBUG [main] org.apache.hadoop.ipc.Client: Connecting to master/172.20.1.14:9000
+2025-03-26 02:26:59,460 DEBUG [main] org.apache.hadoop.ipc.Client: Setup connection to master/172.20.1.14:9000
+2025-03-26 02:26:59,462 DEBUG [IPC Parameter Sending Thread #0] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:9000 from root sending #2 org.apache.hadoop.hdfs.protocol.ClientProtocol.delete
+2025-03-26 02:26:59,462 DEBUG [IPC Client (546796969) connection to master/172.20.1.14:9000 from root] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:9000 from root: starting, having connections 2
+2025-03-26 02:26:59,466 DEBUG [IPC Client (546796969) connection to master/172.20.1.14:9000 from root] org.apache.hadoop.ipc.Client: IPC Client (546796969) connection to master/172.20.1.14:9000 from root got value #2
+2025-03-26 02:26:59,466 DEBUG [main] org.apache.hadoop.ipc.ProtobufRpcEngine2: Call: delete took 6ms
+2025-03-26 02:26:59,470 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Shutdown hook called
+2025-03-26 02:26:59,471 INFO [shutdown-hook-0] org.apache.spark.util.ShutdownHookManager: Deleting directory /tmp/spark-84cf0b96-7d11-4b97-94ac-50434944dc76
+2025-03-26 02:26:59,472 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FileSystem.close() by method: org.apache.hadoop.hdfs.DistributedFileSystem.close(DistributedFileSystem.java:1518)); Key: (root (auth:SIMPLE))@hdfs://master:9000; URI: hdfs://master:9000; Object Identity Hash: 6cff72bf
+2025-03-26 02:26:59,473 DEBUG [shutdown-hook-0] org.apache.hadoop.ipc.Client: stopping client from cache: Client-6fbd7dba631f45eb8150e15da234ea51
+2025-03-26 02:26:59,473 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FileSystem.close() by method: org.apache.hadoop.fs.FilterFileSystem.close(FilterFileSystem.java:529)); Key: (root (auth:SIMPLE))@file://; URI: file:///; Object Identity Hash: 51efd314
+2025-03-26 02:26:59,473 DEBUG [shutdown-hook-0] org.apache.hadoop.fs.FileSystem: FileSystem.close() by method: org.apache.hadoop.fs.RawLocalFileSystem.close(RawLocalFileSystem.java:759)); Key: null; URI: file:///; Object Identity Hash: 5d40b45a
+2025-03-26 02:26:59,474 DEBUG [Thread-1] org.apache.hadoop.util.ShutdownHookManager: Completed shutdown in 0.005 seconds; Timeouts: 0
+2025-03-26 02:26:59,489 DEBUG [Thread-1] org.apache.hadoop.util.ShutdownHookManager: ShutdownHookManager completed shutdown.

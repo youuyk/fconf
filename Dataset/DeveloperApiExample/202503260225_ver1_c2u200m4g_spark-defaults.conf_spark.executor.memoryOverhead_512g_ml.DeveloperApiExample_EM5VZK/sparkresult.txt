@@ -1,0 +1,6 @@
+time: 1.813644965
+timeout: 0
+cpu: 8490
+netIO: 170000 170000
+blockIO: 0 1807200
+result: 2025-03-26 02:27:13,218 INFO [main] client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master/172.20.1.10:8032 Total number of applications (application-types: [], states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED] and tags: []):0 Application-Id Application-Name Application-Type User Queue State Final-State Progress Tracking-URL

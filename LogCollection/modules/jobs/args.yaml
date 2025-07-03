@@ -1,0 +1,167 @@
+spark:
+  AccumulatorMetricsTest:
+  BroadcastTest:
+  DFSReadWriteTest:
+    args: "/spark/README.md hdfs://master:9000"
+  DriverSubmissionTest:
+    args: "5"
+    deploy_mode: "client"
+  ExceptionHandlingTest:
+  GroupByTest:
+  HdfsTest:
+    args: "/file.txt"
+  LocalALS:
+    args: "3 5 4 10"
+    deploy_mode: "client"
+  LocalFileLR:
+    args: "/spark/lr_test.txt 10"
+    deploy_mode: "client"
+  LocalKMeans:
+    deploy_mode: "client"
+  LocalLR:
+    deploy_mode: "client"
+  LogQuery:
+  MultiBroadcastTest:
+    args: "4"
+  SimpleSkewedGroupByTest:
+  SkewedGroupByTest:
+  SparkALS:
+  SparkHdfsLR:
+    args: "/lr_test.txt 10"
+  SparkKMeans:
+    args: "/cluster.txt 2 0.5"
+  SparkLR:
+  SparkPageRank:
+    args: "/page.txt"
+  SparkPi:
+  SparkTC:
+    timeout: "600s"
+  extensions.SparkSessionExtensionsTest:
+  graphx.AggregateMessagesExample:
+  graphx.Analytics:
+    args: 
+  graphx.ComprehensiveExample:
+  graphx.ConnectedComponentsExample:
+  graphx.LiveJournalPageRank:
+    args: 
+  graphx.PageRankExample:
+    args: 
+  graphx.SSSPExample:
+  graphx.SynthBenchmark:
+  graphx.TriangleCountingExample:
+  ml.AFTSurvivalRegressionExample:
+  ml.ALSExample:
+  ml.BinarizerExample:
+  ml.BisectingKMeansExample:
+  ml.BucketedRandomProjectionLSHExample:
+  ml.BucketizerExample:
+  ml.ChiSqSelectorExample:
+  ml.ChiSquareTestExample:
+  ml.CorrelationExample:
+  ml.CountVectorizerExample:
+  ml.DCTExample:
+  ml.DataFrameExample:
+  ml.DecisionTreeClassificationExample:
+  ml.DecisionTreeExample:
+    args: "data/mllib/sample_multiclass_classification_data.txt"
+  ml.DecisionTreeRegressionExample:
+  ml.DeveloperApiExample:
+  ml.ElementwiseProductExample:
+  ml.EstimatorTransformerParamExample:
+  ml.FMClassifierExample:
+  ml.FMRegressorExample:
+  ml.FPGrowthExample:
+  ml.FeatureHasherExample:
+  ml.GBTExample:
+  ml.GaussianMixtureExample:
+  ml.GeneralizedLinearRegressionExample:
+  ml.GradientBoostedTreeClassifierExample:
+  ml.GradientBoostedTreeRegressorExample:
+  ml.ImputerExample:
+  ml.IndexToStringExample:
+  ml.InteractionExample:
+  ml.IsotonicRegressionExample:
+  ml.KMeansExample:
+  ml.LDAExample:
+  ml.LinearRegressionExample:
+  ml.LinearRegressionWithElasticNetExample:
+  ml.LinearSVCExample:
+  ml.LogisticRegressionExample:
+  ml.LogisticRegressionSummaryExample:
+  ml.LogisticRegressionWithElasticNetExample:
+  ml.MaxAbsScalerExample:
+  ml.MinHashLSHExample:
+  ml.MinMaxScalerExample:
+  ml.ModelSelectionViaCrossValidationExample:
+  ml.ModelSelectionViaTrainValidationSplitExample:
+  ml.MulticlassLogisticRegressionWithElasticNetExample:
+  ml.MultilayerPerceptronClassifierExample:
+  ml.NGramExample:
+  ml.NaiveBayesExample:
+  ml.NormalizerExample:
+  ml.OneHotEncoderExample:
+  ml.OneVsRestExample:
+  ml.PCAExample:
+  ml.PipelineExample:
+  ml.PolynomialExpansionExample:
+  ml.PowerIterationClusteringExample:
+  ml.PrefixSpanExample:
+  ml.QuantileDiscretizerExample:
+  ml.RFormulaExample:
+  ml.RandomForestClassifierExample:
+  ml.RandomForestExample:
+  ml.RandomForestRegressorExample:
+  ml.RobustScalerExample:
+  ml.SQLTransformerExample:
+  ml.StandardScalerExample:
+  ml.StopWordsRemoverExample:
+  ml.StringIndexerExample:
+  ml.SummarizerExample:
+  ml.TfIdfExample:
+  ml.TokenizerExample:
+  ml.UnaryTransformerExample:
+  ml.UnivariateFeatureSelectorExample:
+  ml.VarianceThresholdSelectorExample:
+  ml.VectorAssemblerExample:
+  ml.VectorIndexerExample:
+  ml.VectorSizeHintExample:
+  ml.VectorSlicerExample:
+  ml.Word2VecExample:
+  sql.RDDRelation:
+  sql.SQLDataSourceExample:
+  sql.SimpleTypedAggregator:
+  sql.SparkSQLExample:
+  sql.UserDefinedScalar:
+  sql.UserDefinedTypedAggregation:
+  sql.UserDefinedUntypedAggregation:
+  sql.hive.SparkHiveExample:
+  sql.streaming.StructuredComplexSessionization:
+  sql.streaming.StructuredKafkaWordCount:
+  sql.streaming.StructuredKerberizedKafkaWordCount:
+  sql.streaming.StructuredNetworkWordCount:
+  sql.streaming.StructuredNetworkWordCountWindowed:
+  sql.streaming.StructuredSessionization:
+  #streaming.clickstream.PageViewGenerator:
+  #streaming.clickstream.PageViewStream:
+  streaming.CustomReceiver:
+    args: "${ip} 9999"
+  streaming.DirectKafkaWordCount:
+  streaming.DirectKerberizedKafkaWordCount:
+  streaming.HdfsWordCount:
+    args: "/spark/README.md"
+  streaming.NetworkWordCount:
+    args: "localhost 9999"
+  streaming.QueueStream:
+  #streaming.RawNetworkGrep:
+  streaming.RecoverableNetworkWordCount:
+    args: "localhost 9999 ~/checkoutpoint/ ~/out"
+  streaming.SqlNetworkWordCount:
+    args: "localhost 9999"
+  streaming.StatefulNetworkWordCount:
+    args: "localhost 9999"
+  wordcount:
+    args: "/file.txt"
+    class: "com.sparklord.test.WordCount"
+    jar_path: "/spark/sparklord.jar"
+
+mongodb:

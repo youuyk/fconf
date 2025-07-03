@@ -1,0 +1,17 @@
+home= #path to home 
+app=spark
+slave_count=3
+job='ml.LinearSVCExample'
+mode=config
+runmode=run
+build_image=0
+log_version=1
+master_mode=1
+scenario_type= #type of scenario 
+put_input_data=1
+overlap_ip=0
+container_network=bridge
+host_len=1
+host_ip[0]=127.0.0.1
+h_username[0]= #username 
+h_password[0]= #password 

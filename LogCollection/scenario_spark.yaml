@@ -1,0 +1,733 @@
+config:
+  spark.app.name:
+  - MySparkJob
+  - GraphAnalysisApp
+  - DataProcessingPipeline
+  spark.archives:
+  - s3://my-bucket/scripts.tar.gz
+  - file:///home/user/code.zip
+  - hdfs://path/to/libs.zip
+  spark.broadcast.blockSize:
+  - 256g
+  - 512k
+  - 4g
+  - 8k
+  - 2m
+  - 2g
+  - 1024k
+  - 2k
+  - 8m
+  - 512g
+  - 4k
+  - 4m
+  - 256k
+  spark.broadcast.checksum:
+  - false
+  - true
+  spark.broadcast.compress:
+  - false
+  - true
+  spark.cleaner.periodicGC.interval:
+  - 30min
+  - 1s
+  - 2m
+  - 2s
+  - 5m
+  - 4s
+  - 10min
+  - 60min
+  - 4m
+  spark.cleaner.referenceTracking:
+  - false
+  - true
+  spark.cleaner.referenceTracking.blocking:
+  - false
+  - true
+  spark.cleaner.referenceTracking.blocking.shuffle:
+  - false
+  - true
+  spark.default.parallelism:
+  - 32
+  - 256
+  - 2
+  - 512
+  - 1024
+  - 2048
+  - 8192
+  - 16384
+  - 8
+  - 32768
+  - 65536
+  - 131072
+  - 16
+  spark.driver.bindAddress:
+  - 192.168.1.100
+  - 0.0.0.0
+  - spark-driver.local
+  spark.driver.blockManager.port:
+  - 7080
+  - random
+  - 7079
+  spark.driver.extraJavaOptions:
+  - -XX:+UseG1GC
+  - -XX:+UseParallelGC
+  - -XX:+UseConcMarkSweepGC
+  spark.driver.host:
+  - 192.168.51.1
+  - 192.168.0.1
+  - my-spark-host
+  - spark-master
+  - localhost
+  - 172.17.1.1
+  spark.driver.log.persistToDfs.enabled:
+  - false
+  - true
+  spark.driver.maxResultSize:
+  - 0
+  - 256g
+  - 512k
+  - 4g
+  - 8k
+  - 8g
+  - 2g
+  - 1g
+  - 1m
+  - 256k
+  spark.driver.port:
+  - 7077
+  - 7078
+  - random
+  spark.driver.rpc.io.clientThreads:
+  - 64
+  - 32
+  - 2
+  - 1
+  - 100000
+  - 10
+  - 16
+  spark.driver.rpc.io.serverThreads:
+  - 128
+  - 32
+  - 64
+  - 2
+  - 1
+  - 100000
+  - 10
+  spark.driver.rpc.netty.dispatcher.numThreads:
+  - 256
+  - 64
+  - 2
+  - 128
+  - 1
+  - 100000
+  - 10
+  spark.driver.userClassPathFirst:
+  - false
+  - true
+  spark.dynamicAllocation.enabled:
+  - false
+  - true
+  spark.eventLog.compress:
+  - false
+  - true
+  spark.eventLog.compression.codec:
+  - zstd
+  - lz4
+  - snappy
+  spark.eventLog.enabled:
+  - false
+  - true
+  spark.eventLog.longForm.enabled:
+  - false
+  - true
+  spark.excludeOnFailure.enabled:
+  - false
+  - true
+  spark.executor.cores:
+  - 32
+  - 256
+  - 2
+  - 512
+  - 4
+  - 8
+  - 16
+  - 1048
+  spark.executor.defaultJavaOptions:
+  - -XX:+UseG1GC
+  - -XX:+UseParallelGC
+  - -XX:+UseConcMarkSweepGC
+  spark.executor.extraClassPath:
+  - /opt/spark/jars
+  - /custom/path/to/jars
+  - /usr/local/spark/lib
+  spark.executor.extraJavaOptions:
+  - -XX:+PrintGCDetails
+  - -Xmx2g -Xms1g
+  - -verbose:gc -Xloggc:/tmp/-.gc
+  spark.executor.heartbeatInterval:
+  - 400s
+  - 15s
+  - 200s
+  - 5s
+  - 100s
+  - 1000s
+  - 20s
+  spark.executor.memory:
+  - 256g
+  - 1024g
+  - 4g
+  - 8g
+  - 65536g
+  - 2g
+  - 512g
+  spark.executor.memoryOverhead:
+  - 256g
+  - 1024g
+  - 4g
+  - 3g
+  - 65536g
+  - 2g
+  - 512g
+  - 128g
+  spark.executor.metrics.pollingInterval:
+  - 100ms
+  - 0ms
+  - 200ms
+  - 50ms
+  spark.executor.pyspark.memory:
+  - 256g
+  - 1024g
+  - 3g
+  - 2g
+  - 512g
+  - 1g
+  spark.executor.userClassPathFirst:
+  - false
+  - true
+  spark.extraListeners:
+  - org.apache.spark.sql.hive.thriftserver.HiveThriftServer2
+  - org.apache.spark.streaming.StreamingListener
+  - org.apache.spark.sql.execution.datasources.FileScanListener
+  spark.files:
+  - /data/files/*.csv
+  - /data/config/settings.conf
+  - /data/config/*.xml
+  spark.files.overwrite:
+  - false
+  - true
+  spark.files.useFetchCache:
+  - false
+  - true
+  spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version:
+  - 1
+  - 2
+  spark.io.compression.codec:
+  - zstd
+  - lz4
+  - snappy
+  spark.io.compression.lz4.blockSize:
+  - 64k
+  - 32k
+  - 16k
+  spark.jars:
+  - /usr/local/spark/jars/spark-core-custom.jar
+  - /opt/spark/libs/my-spark-extension.jar
+  - /usr/local/spark/jars/spark-ml-custom.jar
+  spark.kryo.classesToRegister:
+  - com.example.MyCustomType
+  - com.thirdparty.library.DataTypeTwo
+  - com.thirdparty.library.DataTypeOne
+  spark.kryo.referenceTracking:
+  - false
+  - true
+  spark.kryo.registrationRequired:
+  - false
+  - true
+  spark.kryo.registrator:
+  - com.example.CustomKryoRegistrator
+  - com.example.AdvancedKryoRegistrator
+  - org.apache.spark.graphx.GraphXKryoRegistrator
+  spark.kryo.unsafe:
+  - false
+  - true
+  spark.kryoserializer.buffer:
+  - 256g
+  - 1024g
+  - 64m
+  - 64g
+  - 128m
+  - 64k
+  - 128g
+  - 256k
+  - 128k
+  spark.kryoserializer.buffer.max:
+  - 64m
+  - 64g
+  - 512m
+  - 512g
+  - 128g
+  - 128m
+  spark.local.dir:
+  - /tmp
+  - /disk1,/disk2
+  - /mnt/ssd1, /mnt/ssd2
+  spark.locality.wait.node:
+  - 0
+  - 30s
+  - 20m
+  - 10m
+  - 100m
+  - 5s
+  - 50s
+  spark.locality.wait.process:
+  - 0
+  - 20m
+  - 10m
+  - 100m
+  - 10s
+  - 5s
+  - 50s
+  spark.log.callerContext:
+  - ApplicationName, Version 1.0
+  - 'App Name: DataProcessing, Job: Stage 1'
+  spark.logConf:
+  - false
+  - true
+  spark.master:
+  - 192.168.51.1
+  - 192.168.0.1
+  - yarn
+  - 172.17.1.1.
+  - spark://localhost:7077
+  - local[*]
+  spark.memory.fraction:
+  - 0.6
+  - 0.5
+  - 0.2
+  - 1.5
+  - 0.7
+  - 2.0
+  - 5.0
+  spark.memory.offHeap.enabled:
+  - false
+  - true
+  spark.memory.offHeap.size:
+  - 0
+  - 200g
+  - 10g
+  - 8g
+  - 100g
+  - 2g
+  - 80g
+  - 20g
+  spark.memory.storageFraction:
+  - 0.3
+  - 0.5
+  - 2.0
+  - 1.5
+  - 0.7
+  - 3.0
+  - 5.0
+  spark.network.maxRemoteBlockSizeFetchToMem:
+  - 100m
+  - 500m
+  - 10s
+  - 30s
+  - 200m
+  - 20s
+  spark.network.timeout:
+  - 300s
+  - 60s
+  - 1s
+  - 2s
+  - 10s
+  - 50s
+  - 120s
+  spark.port.maxRetries:
+  - 32
+  - 1
+  - 8
+  - 10
+  - 16
+  spark.rdd.compress:
+  - false
+  - true
+  spark.reducer.maxBlocksInFlightPerAddress:
+  - 1
+  - 2
+  - 100
+  - 200
+  - 10
+  - 50
+  spark.reducer.maxReqsInFlight:
+  - 1
+  - 2
+  - 100
+  - 200
+  - 10
+  - 50
+  spark.reducer.maxSizeInFlight:
+  - 48m
+  - 16m
+  - 128m
+  spark.rpc.askTimeout:
+  - 30s
+  - 300s
+  - 1s
+  - 10s
+  - 5s
+  - 120s
+  spark.rpc.lookupTimeout:
+  - 30s
+  - 300s
+  - 1s
+  - 10s
+  - 5s
+  - 100s
+  - 120s
+  spark.rpc.message.maxSize:
+  - 256M
+  - 64M
+  - 128M
+  spark.scheduler.barrier.maxConcurrentTasksCheck.interval:
+  - 30s
+  - 100m
+  - 1s
+  - 15s
+  - 5s
+  - 200m
+  spark.scheduler.barrier.maxConcurrentTasksCheck.maxFailures:
+  - 1
+  - 2
+  - 100
+  - 40
+  - 10
+  - 60
+  spark.scheduler.listenerbus.eventqueue.appStatus.capacity:
+  - 20000
+  - 1
+  - 2
+  - 5
+  - 5000
+  - 10
+  - 10000
+  spark.scheduler.listenerbus.eventqueue.capacity:
+  - 20000
+  - 1
+  - 2
+  - 5
+  - 5000
+  - 10
+  - 10000
+  spark.scheduler.listenerbus.eventqueue.executorManagement.capacity:
+  - 20000
+  - 1
+  - 2
+  - 5
+  - 5000
+  - 10
+  - 10000
+  spark.scheduler.listenerbus.eventqueue.shared.capacity:
+  - 20000
+  - 1
+  - 2
+  - 5
+  - 5000
+  - 10
+  - 10000
+  spark.scheduler.mode:
+  - FAIR
+  - FIFO
+  spark.scheduler.resource.profileMergeConflicts:
+  - false
+  - true
+  spark.serializer:
+  - custom.Serializer
+  - org.apache.spark.serializer.KryoSerializer
+  - org.apache.spark.serializer.JavaSerializer
+  spark.serializer.objectStreamReset:
+  - 1
+  - 2
+  - 100
+  - 1000
+  - 10
+  - -1
+  spark.shuffle.checksum.algorithm:
+  - SHA-256
+  - ADLER32
+  - CRC32
+  spark.shuffle.checksum.enabled:
+  - false
+  - true
+  spark.shuffle.compress:
+  - false
+  - true
+  spark.shuffle.file.buffer:
+  - 256g
+  - 4g
+  - 8k
+  - 16k
+  - 2g
+  - 2k
+  - 64k
+  - 512g
+  - 4k
+  - 32k
+  spark.shuffle.push.enabled:
+  - false
+  - true
+  spark.shuffle.push.finalize.timeout:
+  - 10m
+  - 1s
+  - 15s
+  - 10s
+  - 2s
+  - 5s
+  spark.shuffle.push.maxRetainedMergerLocations:
+  - 1
+  - 2
+  - 5
+  - 1000
+  - 200
+  - 10
+  - 500
+  spark.shuffle.push.minCompletedPushRatio:
+  - 0.9
+  - 1
+  - 2
+  - 0.8
+  - 0.5
+  - 10
+  spark.shuffle.push.minShuffleSizeToWait:
+  - 256g
+  - 1k
+  - 10k
+  - 500m
+  - 512g
+  - 2k
+  - 1g
+  - 256m
+  spark.shuffle.service.enabled:
+  - false
+  - true
+  spark.shuffle.sort.bypassMergeThreshold:
+  - 1
+  - 2
+  - 100
+  - 5
+  - 200
+  - 10
+  - 300
+  spark.shuffle.spill.compress:
+  - false
+  - true
+  spark.speculation:
+  - false
+  - true
+  spark.speculation.interval:
+  - 10m
+  - 500ms
+  - 1h
+  - 1s
+  - 2h
+  - 100ms
+  - 1m
+  spark.speculation.minTaskRuntime:
+  - 10m
+  - 300ms
+  - 1h
+  - 1s
+  - 200ms
+  - 100ms
+  - 1m
+  spark.speculation.multiplier:
+  - 0.2
+  - 1.2
+  - 2
+  - 1.5
+  - 0.5
+  - 1.0
+  - 3
+  - 10
+  spark.speculation.quantile:
+  - 0.5
+  - 0.75
+  - 2
+  - 1
+  - 0.9
+  - 5
+  - 10
+  spark.speculation.task.duration.threshold:
+  - 10m
+  - 2m
+  - 10s
+  - 5s
+  - 1h
+  - 1m
+  spark.sql.extensions:
+  - org.apache.spark.sql.SomeExtension1
+  - com.custom.sql.Extension2
+  - org.example.MyCustomParser
+  spark.sql.queryExecutionListeners:
+  - org.apache.spark.sql.listener.BasicQueryExecutionListener
+  - org.example.logging.CustomExecutionLogger
+  - com.custom.sql.listener.AdvancedQueryListener
+  spark.sql.ui.retainedExecutions:
+  - 1
+  - 2
+  - 4
+  - 100
+  - 1000
+  - 10
+  - 2000
+  - 500
+  spark.sql.warehouse.dir:
+  - /mnt/spark-warehouse
+  - /data/spark/warehouse
+  - /local/spark/warehouse
+  spark.stage.maxConsecutiveAttempts:
+  - 1
+  - 3
+  - 100
+  - 4
+  - 6
+  - 1000
+  - 10
+  spark.storage.memoryMapThreshold:
+  - 1k
+  - 4g
+  - 2m
+  - 2g
+  - 2k
+  - 1g
+  - 4k
+  - 1m
+  - 4m
+  spark.storage.replication.proactive:
+  - false
+  - true
+  spark.submit.deployMode:
+  - client
+  - cluster
+  spark.submit.pyFiles:
+  - /mnt/app/python_libs.zip
+  - file1.py,file2.py
+  - '*.py'
+  spark.task.cpus:
+  - 1
+  - 2
+  - 4
+  spark.task.reaper.enabled:
+  - false
+  - true
+  spark.ui.dagGraph.retainedRootRDDs:
+  - 10000
+  - Int.MaxValue
+  - 5000
+  spark.ui.enabled:
+  - false
+  - true
+  spark.ui.filters:
+  - com.test.filter1
+  - com.other.filter2
+  spark.ui.killEnabled:
+  - false
+  - true
+  spark.ui.liveUpdate.minFlushPeriod:
+  - 1s
+  - 2s
+  - 500ms
+  spark.ui.liveUpdate.period:
+  - 100ms
+  - 200ms
+  - -1
+  spark.ui.port:
+  - 4040
+  - 4050
+  - 4060
+  spark.ui.proxyRedirectUri:
+  - http://proxy-example.com
+  - http://proxy-address
+  spark.ui.requestHeaderSize:
+  - 8k
+  - 16k
+  - 2g
+  - 64k
+  - 4k
+  - 1m
+  - 32k
+  - 128k
+  spark.ui.retainedDeadExecutors:
+  - 200
+  - 50
+  - 100
+  spark.ui.retainedJobs:
+  - 1000
+  - 500
+  - 2000
+  spark.ui.retainedStages:
+  - 1000
+  - 500
+  - 2000
+  spark.ui.retainedTasks:
+  - 50000
+  - 200000
+  - 100000
+  spark.ui.reverseProxy:
+  - false
+  - true
+  spark.ui.showConsoleProgress:
+  - false
+  - true
+  spark.ui.timeline.executors.maximum:
+  - 250
+  - 100
+  - 500
+  spark.ui.timeline.jobs.maximum:
+  - 200
+  - 1000
+  - 500
+  spark.ui.timeline.stages.maximum:
+  - 200
+  - 1000
+  - 500
+  spark.ui.timeline.tasks.maximum:
+  - 1000
+  - 500
+  - 2000
+  spark.sql.event.truncate.length:
+  - 2147483647
+  - 1000000
+  - 10000
+  - 0
+  - -1
+  spark.streaming.ui.retainedBatches:
+  - -1
+  - 0
+  - 1000000
+  - 1 
+  - 10
+  spark.streaming.receiver.writeAheadLog.enable:
+  - true
+  - false
+  spark.streaming.unpersist:
+  - true 
+  - false
+  spark.hadoop.validateOutputSpecs:
+  - true
+  - false
+  spark.hadoop.cloneConf:
+  - true 
+  - false
+  spark.graphx.pregel.checkpointInterval:
+  - 0 
+  - 1000000
+  - 1
+  - -1
+  spark.shuffle.accurateBlockThreshold:
+  - 1
+  - 2147483647
+  - -1 
+  - 500000
+  - 0 
+

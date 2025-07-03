@@ -1,0 +1,30 @@
+only spark:
+BroadcastTest
+GroupByTest
+SparkALS
+graphx.AggregateMessagesExample
+graphx.SSSPExample
+graphx.SynthBenchmark
+ml.AFTSurvivalRegressionExample
+ml.ALSExample
+ml.BucketedRandomProjectionLSHExample
+ml.BucketizerExample
+ml.ChiSqSelectorExample
+ml.CorrelationExample
+ml.CountVectorizerExample
+ml.DeveloperApiExample
+ml.EstimatorTransformerParamExample
+ml.FPGrowthExample
+streaming.QueueStream
+
+with hadoop 
+DFSReadWriteTest - hdfs
+HdfsTest - hdfs 
+graphx.ComprehensiveExample
+ml.DecisionTreeClassificationExample
+ml.DecisionTreeRegressionExample
+ml.GaussianMixtureExample
+sql.RDDRelation
+sql.SQLDataSourceExample
+sql.SparkSQLExample
+SparkHdfsLR

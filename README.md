@@ -9,7 +9,7 @@
 
 <img src="https://github.com/user-attachments/assets/17b78d3e-535d-464c-bc94-d264e71a77e7">   
 
-## Organization
+## 📁  Organization
 ---
 ```
 |--Dataset			#Directory of log dataset generated from 'LogCollection'.

@@ -1,13 +1,8 @@
-# Falconf
-
-
 ## 📑 Overview 
 
-**Falconf: Learning to Identify Misconfiguration via Log-based Deep Learning Model**
+**Learning to Identify Misconfiguration via Log-based Deep Learning Model**
 
-*Falconf* is log-based deep learning framework for accurate misconfiguration identification. It employs automated fault injection to associate log template sequences with corresponding misconfigured parameters, and trains a two-stage Transformer model to learn the characteristics of log flows. 
- 
-<img src="https://github.com/user-attachments/assets/17b78d3e-535d-464c-bc94-d264e71a77e7">   
+This work is log-based deep learning framework for accurate misconfiguration identification. It employs automated fault injection to associate log template sequences with corresponding misconfigured parameters, and trains a two-stage Transformer model to learn the characteristics of log flows.
 
 ## 📁  Organization
 ---
@@ -18,13 +13,8 @@
 |--Multi-Stage-Transformer	#Training multi-stage Transformer model 
 ```
 
-## 🖥 Running Falconf 
+## 🖥 Running 
 ---
-```
-git clone https://github.com/youuyk/Falconf.git
-cd Falconf 
-pip install -r requirements.txt
-```
 
 ### Step1. Collecting Logs
 
@@ -71,5 +61,5 @@ python3 run_2nd.py --train_app_path (path for training embedding data) --validat
 The outcome:
 ```
 |--model			#Directory where trained model is stored 
-    |--(name of model) 		#Directory of model 
+    |--(name of model) 		#Directory of model
 ```
